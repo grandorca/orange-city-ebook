@@ -1,21 +1,19 @@
 // import { useState } from "react";
 
-function App() {
+function Search() {
   return (
-    <div className="app">
-      <header className="app-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <p>
-          Learn React
-          <br />
-          Illustration by Viktoriya Belinio
-        </p>
-      </header>
+    <div className="search-div">
+      <label className="search-label">
+        Search
+        <input
+          className="search-input"
+          onChange={() => {
+            console.log("change");
+          }}
+        ></input>
+      </label>
     </div>
   );
 }
 
-export default App;
+export default Search;

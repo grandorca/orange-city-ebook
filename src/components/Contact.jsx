@@ -1,21 +1,20 @@
 // import { useState } from "react";
 
-function App() {
+function Contact() {
   return (
-    <div className="app">
-      <header className="app-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <p>
-          Learn React
-          <br />
-          Illustration by Viktoriya Belinio
-        </p>
-      </header>
+    <div className="contact">
+      <h2>
+        Created by{" "}
+        <a
+          href="https://moohyunkang.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Moohyun Kang
+        </a>
+      </h2>
     </div>
   );
 }
 
-export default App;
+export default Contact;
