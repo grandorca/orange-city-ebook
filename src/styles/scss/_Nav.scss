@@ -3,8 +3,12 @@
 nav {
   position: absolute;
   height: 100%;
-  width: 20vw;
+  width: 0;
   background-color: orange;
   top: 0;
   right: 0;
+
+  & .open {
+    width: 300px;
+  }
 }

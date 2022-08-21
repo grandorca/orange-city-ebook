@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <footer>
-      <span>copyright Moohyun Kang</span>
+      <span className="copyright">copyright Moohyun Kang</span>
     </footer>
   );
 }

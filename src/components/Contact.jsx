@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div className="contact">
       <h2>
-        Created by{" "}
+        designed and developed by&nbsp;
         <a
           href="https://moohyunkang.netlify.app"
           target="_blank"

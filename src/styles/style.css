@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: serif;
 }
 
 body {
@@ -18,17 +19,72 @@ code {
 }
 
 header {
+  position: relative;
   background-color: #10054b;
-}
-header .header-title {
   color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+header .menu {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+header .menu .menu-checkbox {
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+header .menu .menu-hamburger {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .menu .menu-hamburger .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: whitesmoke;
 }
 
 nav {
   position: absolute;
   height: 100%;
-  width: 20vw;
+  width: 0;
   background-color: orange;
   top: 0;
   right: 0;
+}
+nav .open {
+  width: 300px;
+}
+
+footer {
+  position: relative;
+  height: 10em;
+  background-color: #10054b;
+  color: whitesmoke;
+  padding: 2em;
+}
+footer .copyright {
+  position: absolute;
+  vertical-align: bottom;
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */

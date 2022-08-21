@@ -1,0 +1,15 @@
+@use "abstracts" as *;
+
+footer {
+  position: relative;
+  height: 10em;
+  background-color: $background-color;
+  color: $white-color;
+  padding: 2em;
+
+  & .copyright {
+    position: absolute;
+    vertical-align: bottom;
+    color: inherit;
+  }
+}
