@@ -1,23 +1,24 @@
+// import { useEffect } from "react";
+
 import Nav from "./interfaces/Nav";
 import Search from "./interfaces/Search";
 import Header from "./Header";
 import Contact from "./Contact";
 import Book from "./Book";
 import Footer from "./Footer";
-import { useEffect } from "react";
 
 function App() {
-  const fetchData = async () => {
-    await fetch("/.netlify/functions/fetchBooks")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
-  };
+  // const fetchData = async () => {
+  //   await fetch("/.netlify/functions/fetchBooks")
+  //     .then((res) => console.log(res))
+  //     .then((data) => {
+  //       // console.log(data);
+  //     });
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="app">
