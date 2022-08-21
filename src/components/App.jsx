@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function App() {
   const fetchData = async () => {
-    await fetch("/.netlify/functions/fetchBoos")
+    await fetch("/.netlify/functions/fetchBooks")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
