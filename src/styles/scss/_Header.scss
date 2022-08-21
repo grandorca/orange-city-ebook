@@ -1,0 +1,9 @@
+@use "./abstracts" as *;
+
+header {
+  background-color: $background-color;
+
+  & .header-title {
+    color: whitesmoke;
+  }
+}
