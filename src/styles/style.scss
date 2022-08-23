@@ -1,9 +1,13 @@
 @use "./scss/App";
-@use "./scss/Book";
+
 @use "./scss/Header";
 @use "./scss/Nav";
-@use "./scss/Contact";
 @use "./scss/Footer";
+
+@use "./scss/Search";
+@use "./scss/Book";
+
+@use "./scss/Contact";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 //font-family: 'Roboto', sans-serif; 100,300,400

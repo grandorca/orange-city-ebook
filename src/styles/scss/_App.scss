@@ -1,4 +1,4 @@
-@use "abstracts" as *;
+@use "_abstracts" as *;
 
 * {
   margin: 0;
@@ -19,4 +19,7 @@ code {
 
 .app {
   position: relative;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }

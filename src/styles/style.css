@@ -17,14 +17,19 @@ code {
 
 .app {
   position: relative;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 header {
   position: relative;
-  color: whitesmoke;
+  color: black;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  border-bottom: 1px solid;
+  border-color: rgba(100, 100, 100, 0.3);
 }
 header .menu {
   position: absolute;
@@ -61,7 +66,7 @@ header .menu .menu-hamburger .line {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: whitesmoke;
+  background: black;
 }
 
 nav {
@@ -77,12 +82,25 @@ nav .open {
 
 footer {
   position: relative;
-  height: 10em;
-  color: whitesmoke;
-  padding: 2em;
+  display: grid;
+  place-items: center;
+  height: 3em;
+  color: black;
+  border-top: 1px solid;
+  border-color: rgba(100, 100, 100, 0.3);
 }
 footer .copyright {
-  position: absolute;
-  vertical-align: bottom;
+  display: block;
+  font-size: calc(7px + 1vmin);
+}
+footer .copyright .copyright-anchor {
   color: inherit;
+}
+
+.search-div {
+  flex: 1;
+}
+
+.contact {
+  background-color: blue;
 }/*# sourceMappingURL=style.css.map */
