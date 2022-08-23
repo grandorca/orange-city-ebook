@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -20,7 +21,6 @@ code {
 
 header {
   position: relative;
-  background-color: #10054b;
   color: whitesmoke;
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,6 @@ nav {
   position: absolute;
   height: 100%;
   width: 0;
-  background-color: orange;
   top: 0;
   right: 0;
 }
@@ -79,7 +78,6 @@ nav .open {
 footer {
   position: relative;
   height: 10em;
-  background-color: #10054b;
   color: whitesmoke;
   padding: 2em;
 }

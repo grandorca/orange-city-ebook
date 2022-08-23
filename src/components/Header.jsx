@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Header() {
+const Header = () => {
   //today is...
   const [today, setToday] = useState();
 
@@ -33,6 +33,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

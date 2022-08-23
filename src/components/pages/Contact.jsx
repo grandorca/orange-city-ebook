@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-function Contact() {
+const Contact = () => {
   return (
     <div className="contact">
       <h2>
@@ -15,6 +15,6 @@ function Contact() {
       </h2>
     </div>
   );
-}
+};
 
 export default Contact;

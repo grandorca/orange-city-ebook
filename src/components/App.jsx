@@ -1,13 +1,13 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Nav from "./interfaces/Nav";
-import Search from "./interfaces/Search";
 import Header from "./Header";
-import Contact from "./Contact";
-import Book from "./Book";
+import Search from "./pages/Search";
+import Contact from "./pages/Contact";
 import Footer from "./Footer";
 
-function App() {
+const App = () => {
+  /*netlify fucntion test */
   // const fetchData = async () => {
   //   await fetch("/.netlify/functions/fetchBooks")
   //     .then((res) => console.log(res))
@@ -22,15 +22,18 @@ function App() {
 
   return (
     <div className="app">
-      <Nav />
-
       <Header />
-      <Search />
-      <Book />
-      <Contact />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Search />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
