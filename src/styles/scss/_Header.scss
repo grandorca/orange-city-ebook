@@ -4,53 +4,16 @@ header {
   position: relative;
   color: $color-white;
   display: flex;
-  justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: $color-gray;
 
-  // & .header-title {
-  // }
+  & .header-title {
+    color: $color-orange;
+  }
 
-  //menu
-  & .menu {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    right: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-
-    & .menu-checkbox {
-      display: block;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    & .menu-hamburger {
-      display: block;
-      height: 26px;
-      width: 32px;
-      position: absolute;
-      top: 17px;
-      right: 20px;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      & .line {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: $color-white;
-      }
-    }
+  & .today-date {
+    font-size: xx-small;
+    background-color: green;
   }
 }

@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.6509803922);
 }
 
 body {
@@ -26,58 +27,16 @@ header {
   position: relative;
   color: black;
   display: flex;
-  justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: rgba(100, 100, 100, 0.3);
 }
-header .menu {
-  position: absolute;
-  display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  right: 20px;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
+header .header-title {
+  color: orange;
 }
-header .menu .menu-checkbox {
-  display: block;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-header .menu .menu-hamburger {
-  display: block;
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-header .menu .menu-hamburger .line {
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 10px;
-  background: black;
-}
-
-nav {
-  position: absolute;
-  height: 100%;
-  width: 0;
-  top: 0;
-  right: 0;
-}
-nav .open {
-  width: 300px;
+header .today-date {
+  font-size: xx-small;
+  background-color: green;
 }
 
 footer {
@@ -98,9 +57,10 @@ footer .copyright .copyright-anchor {
 }
 
 .search-div {
-  flex: 1;
+  background-color: lightpink;
 }
 
 .contact {
-  background-color: blue;
+  flex: 1;
+  background-color: lightblue;
 }/*# sourceMappingURL=style.css.map */

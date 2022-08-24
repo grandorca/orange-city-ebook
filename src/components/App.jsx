@@ -8,9 +8,9 @@ import Footer from "./Footer";
 const App = () => {
   return (
     <div className="app">
-      <Header />
-
       <Router>
+        <Header />
+
         <Routes>
           <Route path="/" element={<Search />} />
           <Route path="/contact" element={<Contact />} />

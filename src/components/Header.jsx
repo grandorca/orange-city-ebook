@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   //today is...
@@ -19,18 +20,17 @@ const Header = () => {
     <header>
       <h1 className="header-title">Orange City Commnunity E-Bookstore</h1>
 
-      <div className="today">
+      <div className="today-date">
         <span>{today}</span>
       </div>
 
-      <div className="menu">
-        <input className="menu-checkbox" type="checkbox" />
-        <div className="menu-hamburger">
-          <span className="line line1"></span>
-          <span className="line line2"></span>
-          <span className="line line3"></span>
-        </div>
-      </div>
+      <Link to="/" className="nav-anchor">
+        Search
+      </Link>
+
+      <Link to="/contact" className="nav-anchor">
+        Contact
+      </Link>
     </header>
   );
 };
