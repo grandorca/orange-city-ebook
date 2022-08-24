@@ -3,7 +3,6 @@
 .contact {
   flex: 1;
   margin: auto;
-  margin-top: 10vh;
 
   & .contact-card {
     display: flex;
@@ -12,15 +11,21 @@
     border: 1px solid $color-gray;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 70vw;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 
     @include mobile {
-      flex-flow: column;
       width: 90vw;
+      flex-flow: column;
+      margin-top: 5vh;
     }
 
     & .contact-user {
       width: 300px;
-      min-width: 100px;
+      min-width: 150px;
       height: auto;
     }
 

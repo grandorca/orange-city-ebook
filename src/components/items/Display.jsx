@@ -5,13 +5,15 @@ const Display = (props) => {
 
   const results = [{ id: 11, title: "title" }];
 
-  useEffect(() => {}, [props.searchResults]);
+  useEffect(() => {
+    console.log(props.searchResults);
+  }, [props.searchResults]);
 
   return (
-    <div className="book-display">
+    <div className="display">
       {results.map((book) => {
         return (
-          <div className="book-card" key={book.id}>
+          <div className="display-card" key={book.id}>
             {book.title}
           </div>
         );

@@ -8,11 +8,15 @@ const Contact = () => {
 
         <div className="contact-text-container">
           <p className="contact-p" id="contact-p-text">
-            &nbsp;Designed and developed by a web developer, Moohyun Kang.
+            Designed and developed by a web developer, Moohyun Kang.
             <br />
             <br />
-            &nbsp;This website demonstrates back-end development skills handling
-            of data.asdfkjsd;ljfkjasd
+            This website provides book infromation to users.
+            <br />
+            The information can be searched with title, author, and publisher.
+            <br />
+            The search data is retrieved from Google Books APIs and displayed on
+            the screen.
           </p>
           <p className="contact-p" id="contact-p-anchor">
             <a

@@ -1,12 +1,106 @@
 @use "_abstracts" as *;
 
-.search-div {
-  & svg {
-    width: 500px;
-    min-width: 200px;
+.search {
+  /**upper part of the search page*/
+  & .search-section {
+    width: 75vw;
+    margin: auto;
+    padding: 5rem 0;
 
-    height: auto;
+    @include tablet {
+      width: 90vw;
+    }
+
+    @include mobile {
+      padding: 2rem 0;
+    }
+
     //dev
-    border: 1px solid black;
+    border-bottom: 10px solid $color-gray;
+  }
+
+  & svg {
+    width: 100%;
+    min-width: 200px;
+    max-width: 550px;
+    height: auto;
+    margin: auto;
+  }
+
+  & .search-section {
+    display: flex;
+    flex-flow: row;
+    gap: 3rem 3rem;
+
+    @include mobile {
+      flex-flow: column;
+    }
+
+    //form contains label, input, button
+    & .search-form {
+      flex: 1;
+      display: grid;
+      place-items: center;
+
+      & .search-form-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: wrap column;
+        gap: 2rem;
+        width: 100%;
+
+        & .search-label {
+          display: block;
+          text-align: center;
+          font-size: $font-size-large;
+        }
+
+        & .search-input-duo {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          width: 100%;
+
+          @include tablet {
+            flex-flow: column;
+          }
+
+          & .search-input {
+            outline: none;
+            padding: 0.5rem;
+            font-size: $font-size-medium;
+            border: 1px solid $color-orange;
+            border-radius: 10px;
+            min-width: 15rem;
+            width: 100%;
+          }
+
+          & .search-button {
+            padding: 0.5rem 2rem;
+            font-size: $font-size-medium;
+            font-weight: 600;
+            color: $color-white;
+            background-color: $color-orange;
+            border: none;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: $color-orange-light;
+            }
+            &:active {
+              background-color: $color-orange-dark;
+            }
+          }
+        } //end of search-input-duo
+      }
+    } //end of search-form
+  }
+
+  /**lower part of the search page*/
+  & .display-section {
+    padding: 10vh 5vw;
+    //dev
+    background-color: lightblue;
   }
 }
