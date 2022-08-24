@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+
 import Display from "../interfaces/Display";
 
 const Search = () => {

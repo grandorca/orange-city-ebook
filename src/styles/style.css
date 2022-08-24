@@ -103,5 +103,39 @@ footer .copyright .copyright-anchor {
 
 .contact {
   flex: 1;
-  background-color: lightblue;
+  margin: auto;
+  margin-top: 10vh;
+}
+.contact .contact-card {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  border-radius: 30px;
+}
+@media only screen and (max-width: 640px) {
+  .contact .contact-card {
+    flex-flow: column;
+    width: 90vw;
+  }
+}
+.contact .contact-card .contact-user {
+  width: 300px;
+  min-width: 100px;
+  height: auto;
+}
+.contact .contact-card .contact-text-container {
+  font-size: calc(15px + 0.5vmin);
+  padding: 2rem;
+  padding-left: 1rem;
+}
+.contact .contact-card .contact-text-container #contact-p-text {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.contact .contact-card .contact-text-container #contact-p-anchor {
+  text-align: center;
+}
+.contact .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item {
+  color: rgba(0, 0, 0, 0.7);
 }/*# sourceMappingURL=style.css.map */

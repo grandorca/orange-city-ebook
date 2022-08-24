@@ -2,5 +2,44 @@
 
 .contact {
   flex: 1;
-  background-color: lightblue;
+  margin: auto;
+  margin-top: 10vh;
+
+  & .contact-card {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    border: 1px solid $color-gray;
+    border-radius: 30px;
+
+    @include mobile {
+      flex-flow: column;
+      width: 90vw;
+    }
+
+    & .contact-user {
+      width: 300px;
+      min-width: 100px;
+      height: auto;
+    }
+
+    & .contact-text-container {
+      font-size: $font-size-medium;
+      padding: 2rem;
+      padding-left: 1rem;
+
+      & #contact-p-text {
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+
+      & #contact-p-anchor {
+        text-align: center;
+
+        & .contact-p-anchor-item {
+          color: $color-font;
+        }
+      }
+    }
+  }
 }

@@ -4,9 +4,11 @@ const Display = (props) => {
   // const results = props.searchResults;
 
   const results = [{ id: 11, title: "title" }];
+
   useEffect(() => {
     console.log("data recieved");
   }, [props.searchResults]);
+
   return (
     <div className="book-display">
       {results.map((book) => {
