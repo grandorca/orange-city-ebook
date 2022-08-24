@@ -2,10 +2,16 @@
 $color-orange: orange;
 $color-white: black;
 $color-gray: rgb(100, 100, 100, 0.3);
-$color-font: #000000a6;
+$color-font: rgb(0, 0, 0, 0.7);
 
 //font-sizes
-$font-size-small: calc(7px + 1vmin);
-$font-size-medium: calc(10px + 1vmin);
-$font-size-large: calc(15px + 1vmin);
-$font-size-title: calc(20px + 1vmin);
+$font-size-small: calc(9px + 0.5vmin);
+$font-size-medium: calc(15px + 0.5vmin);
+$font-size-large: calc(16px + 1vmin);
+
+//mixins
+@mixin mobile {
+  @media only screen and (max-width: 640px) {
+    @content;
+  }
+}

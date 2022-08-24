@@ -2,18 +2,62 @@
 
 header {
   position: relative;
-  color: $color-white;
   display: flex;
-  padding: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
   border-bottom: 1px solid;
   border-color: $color-gray;
+  gap: 0 1rem;
+
+  @include mobile {
+    padding: 1rem;
+  }
 
   & .header-title {
-    color: $color-orange;
+    flex: 1;
+    color: orange;
+    line-height: 0.9em;
+    white-space: nowrap;
+    font-family: "Lora", serif;
+    font-size: 40px;
+
+    @include mobile {
+      font-size: 30px;
+    }
+
+    & p {
+      font-family: inherit;
+    }
+  }
+
+  & .header-right {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 0.5rem 3rem;
+
+    @include mobile {
+      flex-flow: column;
+    }
   }
 
   & .today-date {
-    font-size: xx-small;
-    background-color: green;
+    font-weight: 600;
+    font-size: $font-size-small;
+    color: $color-font;
+  }
+
+  & nav {
+    font-weight: 600;
+    font-size: $font-size-medium;
+
+    & .nav-anchor {
+      text-decoration: none;
+      color: $color-font;
+
+      &:hover {
+        color: black;
+      }
+    }
   }
 }

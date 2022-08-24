@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@100;300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  color: rgba(0, 0, 0, 0.6509803922);
 }
 
 body {
@@ -25,18 +24,60 @@ code {
 
 header {
   position: relative;
-  color: black;
   display: flex;
-  padding: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
   border-bottom: 1px solid;
   border-color: rgba(100, 100, 100, 0.3);
+  gap: 0 1rem;
+}
+@media only screen and (max-width: 640px) {
+  header {
+    padding: 1rem;
+  }
 }
 header .header-title {
+  flex: 1;
   color: orange;
+  line-height: 0.9em;
+  white-space: nowrap;
+  font-family: "Lora", serif;
+  font-size: 40px;
+}
+@media only screen and (max-width: 640px) {
+  header .header-title {
+    font-size: 30px;
+  }
+}
+header .header-title p {
+  font-family: inherit;
+}
+header .header-right {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 0.5rem 3rem;
+}
+@media only screen and (max-width: 640px) {
+  header .header-right {
+    flex-flow: column;
+  }
 }
 header .today-date {
-  font-size: xx-small;
-  background-color: green;
+  font-weight: 600;
+  font-size: calc(9px + 0.5vmin);
+  color: rgba(0, 0, 0, 0.7);
+}
+header nav {
+  font-weight: 600;
+  font-size: calc(15px + 0.5vmin);
+}
+header nav .nav-anchor {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+header nav .nav-anchor:hover {
+  color: black;
 }
 
 footer {
@@ -50,7 +91,7 @@ footer {
 }
 footer .copyright {
   display: block;
-  font-size: calc(7px + 1vmin);
+  font-size: calc(9px + 0.5vmin);
 }
 footer .copyright .copyright-anchor {
   color: inherit;
