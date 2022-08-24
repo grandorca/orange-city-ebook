@@ -34,7 +34,7 @@ const Header = () => {
           <Link to="/" className="nav-anchor">
             Search
           </Link>
-          &nbsp;|&nbsp;
+
           <Link to="/contact" className="nav-anchor">
             Contact
           </Link>

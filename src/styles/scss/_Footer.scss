@@ -1,17 +1,19 @@
 @use "_abstracts" as *;
 
 footer {
-  position: relative;
-  display: grid;
-  place-items: center;
-  height: 3em;
   color: $color-white;
   border-top: 1px solid;
   border-color: $color-gray;
 
   & .copyright {
+    text-align: center;
+    margin: 1.2rem 0;
     display: block;
     font-size: $font-size-small;
+
+    &#developer {
+      margin-bottom: 2rem;
+    }
 
     & .copyright-anchor {
       color: inherit;

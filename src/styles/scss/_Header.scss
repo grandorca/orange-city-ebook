@@ -3,11 +3,12 @@
 header {
   position: relative;
   display: flex;
-  align-items: center;
   padding: 1rem 2rem;
   border-bottom: 1px solid;
   border-color: $color-gray;
   gap: 0 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: linear-gradient(#f1f1f1, white 100%);
 
   @include mobile {
     padding: 1rem;
@@ -15,7 +16,7 @@ header {
 
   & .header-title {
     flex: 1;
-    color: orange;
+    color: $color-orange;
     line-height: 0.9em;
     white-space: nowrap;
     font-family: "Lora", serif;
@@ -32,26 +33,34 @@ header {
 
   & .header-right {
     display: flex;
-    flex-flow: row;
-    align-items: center;
-    gap: 0.5rem 3rem;
+    flex-flow: column;
 
-    @include mobile {
-      flex-flow: column;
-    }
+    gap: 0.5rem 3rem;
   }
 
   & .today-date {
-    font-weight: 600;
-    font-size: $font-size-small;
+    text-align: right;
+    font-size: xx-small;
     color: $color-font;
   }
 
   & nav {
+    display: flex;
+    height: 100%;
     font-weight: 600;
     font-size: $font-size-medium;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-right: 2rem;
+
+    @include mobile {
+      margin-right: 0;
+      gap: 0;
+    }
 
     & .nav-anchor {
+      display: inline-block;
+      align-self: flex-end;
       text-decoration: none;
       color: $color-font;
 

@@ -1,5 +1,12 @@
 @use "_abstracts" as *;
 
 .search-div {
-  background-color: lightpink;
+  & svg {
+    width: 500px;
+    min-width: 200px;
+
+    height: auto;
+    //dev
+    border: 1px solid black;
+  }
 }

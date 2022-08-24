@@ -11,6 +11,7 @@
     padding-bottom: 1rem;
     border: 1px solid $color-gray;
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     @include mobile {
       flex-flow: column;
@@ -38,6 +39,12 @@
 
         & .contact-p-anchor-item {
           color: $color-font;
+          &:hover {
+            color: black;
+          }
+          &:active {
+            color: gray;
+          }
         }
       }
     }

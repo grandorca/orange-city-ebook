@@ -8,7 +8,11 @@ const Contact = () => {
 
         <div className="contact-text-container">
           <p className="contact-p" id="contact-p-text">
-            Designed and developed by a web developer, Moohyun Kang.
+            &nbsp;Designed and developed by a web developer, Moohyun Kang.
+            <br />
+            <br />
+            &nbsp;This website demonstrates back-end development skills handling
+            of data.asdfkjsd;ljfkjasd
           </p>
           <p className="contact-p" id="contact-p-anchor">
             <a
