@@ -3,9 +3,24 @@
 .search {
   /**upper part of the search page*/
   & .search-section {
+    position: relative;
     width: 75vw;
     margin: auto;
     padding: 5rem 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50vw;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      border-bottom: 1px solid $color-gray;
+
+      @include tablet {
+        width: 85vw;
+      }
+    }
 
     @include tablet {
       width: 90vw;
@@ -14,14 +29,10 @@
     @include mobile {
       padding: 2rem 0;
     }
-
-    //dev
-    border-bottom: 10px solid $color-gray;
   }
 
   & svg {
     width: 100%;
-    min-width: 200px;
     max-width: 550px;
     height: auto;
     margin: auto;
@@ -71,7 +82,7 @@
             padding: 0.5rem;
             font-size: $font-size-medium;
             border: 1px solid $color-orange;
-            border-radius: 10px;
+            border-radius: $border-radius;
             min-width: 15rem;
             width: 100%;
           }
@@ -83,7 +94,7 @@
             color: $color-white;
             background-color: $color-orange;
             border: none;
-            border-radius: 10px;
+            border-radius: $border-radius;
 
             &:hover {
               background-color: $color-orange-light;
@@ -99,8 +110,15 @@
 
   /**lower part of the search page*/
   & .display-section {
-    padding: 10vh 5vw;
-    //dev
-    background-color: lightblue;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    & svg {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      margin: 10vh 0;
+    }
   }
 }

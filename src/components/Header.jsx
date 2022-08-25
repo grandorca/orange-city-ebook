@@ -22,7 +22,7 @@ const Header = () => {
     <header>
       <h1 className="header-title">
         <p>Orange City</p>
-        <p>Bookstore</p>
+        <p>&nbsp;Bookstore</p>
       </h1>
 
       <div className="header-right">

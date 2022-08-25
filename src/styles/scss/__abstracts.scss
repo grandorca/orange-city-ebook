@@ -1,3 +1,4 @@
+/**variables*/
 //colors
 $color-orange-dark: #e59400;
 $color-orange-light: #ffae19;
@@ -11,7 +12,10 @@ $font-size-small: calc(9px + 0.5vmin);
 $font-size-medium: calc(15px + 0.5vmin);
 $font-size-large: calc(16px + 1vmin);
 
-//mixins
+//border-radius
+$border-radius: 10px;
+
+/**mixins*/
 @mixin mobile {
   @media only screen and (max-width: 640px) {
     @content;

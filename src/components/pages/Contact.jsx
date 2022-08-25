@@ -11,12 +11,14 @@ const Contact = () => {
             Designed and developed by a web developer, Moohyun Kang.
             <br />
             <br />
-            This website provides book infromation to users.
+            This website allow users to search books that are saved in Google
+            book database.
             <br />
-            The information can be searched with title, author, and publisher.
+            The information of the book can be searched with book's title,
+            author, and publisher.
             <br />
-            The search data is retrieved from Google Books APIs and displayed on
-            the screen.
+            The search data is retrieved from Google Books APIs through Google
+            Cloud server.
           </p>
           <p className="contact-p" id="contact-p-anchor">
             <a

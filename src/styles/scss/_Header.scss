@@ -17,10 +17,10 @@ header {
   & .header-title {
     flex: 1;
     color: $color-orange;
-    line-height: 0.9em;
+    line-height: 0.85em;
     white-space: nowrap;
     font-family: "Lora", serif;
-    font-size: 40px;
+    font-size: 45px;
 
     @include mobile {
       font-size: 30px;
