@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Display from "../items/Display";
+import Display from "../elements/Display";
 import { ReactComponent as Bookshelf } from "../../assets/illustrations/bookshelf.svg";
 import { ReactComponent as Reading } from "../../assets/illustrations/reading.svg";
 

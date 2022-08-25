@@ -4,51 +4,63 @@
   display: flex;
   flex-flow: column;
   gap: 2rem;
-  padding: 4rem;
+  width: 80vw;
+  padding: 4rem 0;
   margin: auto;
 
   @include tablet {
-    padding: 1rem;
+    width: 90vw;
   }
 
-  & .display-book {
-    padding: 1rem;
+  /**each book display card*/
+  & .book-card {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
     border: 1px solid $color-gray;
     border-radius: $border-radius;
+    padding: 1rem;
     float: left;
 
-    & .book-item {
-      &#book-cover {
-        width: 100px;
-        height: auto;
-        float: left;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-        border-radius: $border-radius;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    & #book-cover {
+      width: 150px;
+      height: auto;
+      float: left;
+      margin-right: 1rem;
+      border-radius: $border-radius;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      cursor: pointer;
+    }
+
+    & .book-detail {
+      position: relative;
+      align-self: flex-start;
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+
+      & .detail-sub-title {
+        font-weight: 600;
       }
 
-      &#book-title {
+      & .book-item {
+        font-size: $font-size-medium;
+      }
+
+      & #book-title {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
 
-        font-size: $font-size-medium;
-      }
+        font-size: $font-size-large;
+        margin-bottom: 1rem;
 
-      &#book-author {
-      }
-
-      &#book-publisher {
-      }
-
-      &#book-description {
-        display: -webkit-box;
-        -webkit-line-clamp: 8;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        & span:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
     }
-  }
+  } //end of book-card
 }

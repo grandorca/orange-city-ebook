@@ -31,7 +31,6 @@ header {
   border-bottom: 1px solid;
   border-color: rgba(100, 100, 100, 0.3);
   gap: 0 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background: linear-gradient(#f1f1f1, white 100%);
 }
 @media only screen and (max-width: 640px) {
@@ -69,7 +68,7 @@ header nav {
   display: flex;
   height: 100%;
   font-weight: 600;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(16px + 0.5vmin);
   justify-content: space-between;
   gap: 3rem;
   margin-right: 2rem;
@@ -174,7 +173,7 @@ footer .copyright .copyright-anchor {
 .search .search-section .search-form .search-form-center .search-label {
   display: block;
   text-align: center;
-  font-size: calc(16px + 1vmin);
+  font-size: calc(21px + 0.5vmin);
 }
 .search .search-section .search-form .search-form-center .search-input-duo {
   display: flex;
@@ -190,7 +189,7 @@ footer .copyright .copyright-anchor {
 .search .search-section .search-form .search-form-center .search-input-duo .search-input {
   outline: none;
   padding: 0.5rem;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(16px + 0.5vmin);
   border: 1px solid orange;
   border-radius: 10px;
   min-width: 15rem;
@@ -198,7 +197,7 @@ footer .copyright .copyright-anchor {
 }
 .search .search-section .search-form .search-form-center .search-input-duo .search-button {
   padding: 0.5rem 2rem;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(16px + 0.5vmin);
   font-weight: 600;
   color: white;
   background-color: orange;
@@ -227,41 +226,80 @@ footer .copyright .copyright-anchor {
   display: flex;
   flex-flow: column;
   gap: 2rem;
-  padding: 4rem;
+  width: 80vw;
+  padding: 4rem 0;
   margin: auto;
+  /**each book display card*/
 }
 @media only screen and (max-width: 1024px) {
   .display {
-    padding: 1rem;
+    width: 90vw;
   }
 }
-.display .display-book {
-  padding: 1rem;
+.display .book-card {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
   border: 1px solid rgba(100, 100, 100, 0.3);
   border-radius: 10px;
+  padding: 1rem;
   float: left;
 }
-.display .display-book .book-item#book-cover {
-  width: 100px;
+.display .book-card #book-cover {
+  width: 150px;
   height: auto;
   float: left;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
 }
-.display .display-book .book-item#book-title {
+.display .book-card .book-detail {
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.display .book-card .book-detail .detail-sub-title {
+  font-weight: 600;
+}
+.display .book-card .book-detail .book-item {
+  font-size: calc(14px + 0.5vmin);
+}
+.display .book-card .book-detail #book-title {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(16px + 0.5vmin);
+  margin-bottom: 1rem;
 }
-.display .display-book .book-item#book-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.display .book-card .book-detail #book-title span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  max-width: 90vw;
+  height: 70vh;
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  border-radius: 10px;
+  overflow: scroll;
+}
+@media only screen and (max-width: 1024px) {
+  .popup {
+    height: 50vh;
+  }
+}
+.popup #popup-title {
+  margin-bottom: 2rem;
 }
 
 .contact {
@@ -294,7 +332,7 @@ footer .copyright .copyright-anchor {
   height: auto;
 }
 .contact .contact-card .contact-text-container {
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(14px + 0.5vmin);
   padding: 2rem;
   padding-left: 1rem;
 }

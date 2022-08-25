@@ -7,7 +7,6 @@ header {
   border-bottom: 1px solid;
   border-color: $color-gray;
   gap: 0 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background: linear-gradient(#f1f1f1, white 100%);
 
   @include mobile {
@@ -48,7 +47,7 @@ header {
     display: flex;
     height: 100%;
     font-weight: 600;
-    font-size: $font-size-medium;
+    font-size: $font-size-large;
     justify-content: space-between;
     gap: 3rem;
     margin-right: 2rem;

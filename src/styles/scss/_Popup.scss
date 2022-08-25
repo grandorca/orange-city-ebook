@@ -1,0 +1,23 @@
+@use "_abstracts" as *;
+
+.popup {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  max-width: 90vw;
+  height: 70vh;
+  border: 1px solid $color-gray;
+  border-radius: $border-radius;
+  overflow: scroll;
+
+  @include tablet {
+    height: 50vh;
+  }
+
+  & #popup-title {
+    margin-bottom: 2rem;
+  }
+}

@@ -64,7 +64,7 @@
         & .search-label {
           display: block;
           text-align: center;
-          font-size: $font-size-large;
+          font-size: calc(21px + 0.5vmin);
         }
 
         & .search-input-duo {
@@ -80,7 +80,7 @@
           & .search-input {
             outline: none;
             padding: 0.5rem;
-            font-size: $font-size-medium;
+            font-size: $font-size-large;
             border: 1px solid $color-orange;
             border-radius: $border-radius;
             min-width: 15rem;
@@ -89,7 +89,7 @@
 
           & .search-button {
             padding: 0.5rem 2rem;
-            font-size: $font-size-medium;
+            font-size: $font-size-large;
             font-weight: 600;
             color: $color-white;
             background-color: $color-orange;
