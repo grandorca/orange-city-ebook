@@ -325,6 +325,7 @@ footer .copyright .copyright-anchor {
   color: black;
   font-size: calc(14px + 0.5vmin);
   margin-bottom: 4rem;
+  line-height: 1.2rem;
 }
 
 .contact {
