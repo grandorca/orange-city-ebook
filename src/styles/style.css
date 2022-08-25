@@ -254,6 +254,9 @@ footer .copyright .copyright-anchor {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   cursor: pointer;
 }
+.display .book-card #book-cover:hover + .book-detail #book-title {
+  text-decoration: underline;
+}
 .display .book-card .book-detail {
   position: relative;
   align-self: flex-start;

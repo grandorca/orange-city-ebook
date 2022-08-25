@@ -22,6 +22,9 @@ const Search = () => {
         .then((res) => res.json())
         .then((data) => {
           setResults(data);
+        })
+        .catch((error) => {
+          console.log(error);
         });
     } else {
       setResults([]);

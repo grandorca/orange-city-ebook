@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 
 const Display = (props) => {
@@ -6,17 +6,19 @@ const Display = (props) => {
   const books = props.searchResults.items;
 
   //open book description modal
-  // const [clickedBookId, setClickedBookId] = useState("");
+  const [bookInfo, setBookInfo] = useState({});
 
-  const openPopup = (clickedBook) => {
-    // console.log(clickedBook.target.getAttribute("book-id"));
-    // const clickedBookId = clickedBook.target.getAttribute("book-id");
-    // setClickedBookId(`${clickedBookId}`);
+  const openModal = ({ bookInfo }) => {
+    console.log(bookInfo.title);
+    setBookInfo(
+      { title: bookInfo.title },
+      { description: bookInfo.description }
+    );
   };
 
   return (
     <div className="display">
-      {/* each book */}
+      {/* each book card */}
       {books.map((book) => {
         // let indexOfThisBook = books.indexOf(book) + 1;
         let bookInfo = book.volumeInfo;
@@ -31,12 +33,20 @@ const Display = (props) => {
               alt="book cover"
               src={bookCover}
               book-id={book.id}
-              onClick={(e) => openPopup(e)}
+              onClick={() => {
+                openModal({ bookInfo });
+              }}
             ></img>
 
             <div className="book-detail">
               <h2 className="book-item" id="book-title">
-                <span onClick={(e) => openPopup(e)}>{bookInfo.title}</span>
+                <span
+                  onClick={() => {
+                    openModal({ bookInfo });
+                  }}
+                >
+                  {bookInfo.title}
+                </span>
               </h2>
               <p className="book-item" id="book-authors">
                 {bookInfo.authors.length > 1 ? (
@@ -68,17 +78,12 @@ const Display = (props) => {
                 {bookInfo.publishedDate}
               </p>
             </div>
-
-            {/* book description modal with full title */}
-            <Modal
-              // clickedBookId={clickedBookId}
-              bookId={`${book.id}`}
-              bookTitle={bookInfo.title}
-              bookDescription={bookInfo.description}
-            />
           </div>
         );
       })}
+
+      {/* book description modal with full book title */}
+      <Modal bookInfo={bookInfo} />
     </div>
   );
 };
