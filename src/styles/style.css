@@ -280,7 +280,7 @@ footer .copyright .copyright-anchor {
   cursor: pointer;
 }
 
-.popup {
+.modal {
   position: fixed;
   display: none;
   top: 50%;
@@ -294,11 +294,11 @@ footer .copyright .copyright-anchor {
   overflow: scroll;
 }
 @media only screen and (max-width: 1024px) {
-  .popup {
+  .modal {
     height: 50vh;
   }
 }
-.popup #popup-title {
+.modal #modal-title {
   margin-bottom: 2rem;
 }
 

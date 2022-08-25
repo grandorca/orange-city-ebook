@@ -1,15 +1,17 @@
-import { useState } from "react";
-import Popup from "./Popup";
+// import { useState } from "react";
+import Modal from "./Modal";
 
 const Display = (props) => {
   //reseive search result from Search component
   const books = props.searchResults.items;
 
-  //view book description
-  const [popupTrigger, setPopupTrigger] = useState(false);
+  //open book description modal
+  // const [clickedBookId, setClickedBookId] = useState("");
 
-  const openPopup = () => {
-    setPopupTrigger(false);
+  const openPopup = (clickedBook) => {
+    // console.log(clickedBook.target.getAttribute("book-id"));
+    // const clickedBookId = clickedBook.target.getAttribute("book-id");
+    // setClickedBookId(`${clickedBookId}`);
   };
 
   return (
@@ -28,12 +30,13 @@ const Display = (props) => {
               id="book-cover"
               alt="book cover"
               src={bookCover}
-              onClick={openPopup}
+              book-id={book.id}
+              onClick={(e) => openPopup(e)}
             ></img>
 
             <div className="book-detail">
               <h2 className="book-item" id="book-title">
-                <span onClick={openPopup}>{bookInfo.title}</span>
+                <span onClick={(e) => openPopup(e)}>{bookInfo.title}</span>
               </h2>
               <p className="book-item" id="book-authors">
                 {bookInfo.authors.length > 1 ? (
@@ -66,9 +69,10 @@ const Display = (props) => {
               </p>
             </div>
 
-            {/* book description popup with full title */}
-            <Popup
-              trigger={popupTrigger}
+            {/* book description modal with full title */}
+            <Modal
+              // clickedBookId={clickedBookId}
+              bookId={`${book.id}`}
               bookTitle={bookInfo.title}
               bookDescription={bookInfo.description}
             />

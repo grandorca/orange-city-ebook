@@ -1,6 +1,6 @@
 @use "_abstracts" as *;
 
-.popup {
+.modal {
   position: fixed;
   display: none;
   top: 50%;
@@ -17,7 +17,7 @@
     height: 50vh;
   }
 
-  & #popup-title {
+  & #modal-title {
     margin-bottom: 2rem;
   }
 }
