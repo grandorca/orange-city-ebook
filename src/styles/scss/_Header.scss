@@ -50,11 +50,11 @@ header {
     font-size: $font-size-large;
     justify-content: space-between;
     gap: 3rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 
     @include mobile {
       margin-right: 0;
-      gap: 0;
+      gap: 2rem;
     }
 
     & .nav-anchor {

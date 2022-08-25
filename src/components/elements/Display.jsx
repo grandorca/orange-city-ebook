@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 const Display = (props) => {
@@ -6,15 +6,22 @@ const Display = (props) => {
   const books = props.searchResults.items;
 
   //open book description modal
-  const [bookInfo, setBookInfo] = useState({});
+  const [bookModal, setBookModal] = useState({});
+  const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = ({ bookInfo }) => {
-    console.log(bookInfo.title);
-    setBookInfo(
-      { title: bookInfo.title },
-      { description: bookInfo.description }
-    );
+    setBookModal({ title: bookInfo.title, description: bookInfo.description });
+    console.log(bookInfo.description);
+    setModalOpen(true);
   };
+
+  //disable scroll
+
+  // useEffect(() => {
+  //   if (modalOpen) {
+  //     window;
+  //   }
+  // }, [modalOpen]);
 
   return (
     <div className="display">
@@ -83,7 +90,11 @@ const Display = (props) => {
       })}
 
       {/* book description modal with full book title */}
-      <Modal bookInfo={bookInfo} />
+      <Modal
+        bookModal={bookModal}
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+      />
     </div>
   );
 };
