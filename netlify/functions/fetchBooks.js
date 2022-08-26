@@ -12,5 +12,9 @@ exports.handler = async function (event) {
       statusCode: 200,
       body: JSON.stringify(data),
     };
-  } catch (erro) {}
+  } catch (error) {
+    return {
+      statusCode: 500,
+    };
+  }
 };
