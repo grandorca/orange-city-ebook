@@ -18,7 +18,6 @@ const Search = () => {
       await fetch(`/.netlify/functions/fetchBooks?query=${query}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.items);
           setResults(data.items);
         })
         .catch((error) => {
