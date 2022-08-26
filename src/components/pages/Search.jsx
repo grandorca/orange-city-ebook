@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Display from "../elements/Display";
 import { ReactComponent as Bookshelf } from "../../assets/illustrations/bookshelf.svg";
 import { ReactComponent as Reading } from "../../assets/illustrations/reading.svg";
@@ -15,13 +15,10 @@ const Search = () => {
     const trimedQuery = query.trim();
 
     if (trimedQuery !== "") {
-      await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`,
-        { method: "GET", headers: { "Content-Type": "application/json" } }
-      )
+      await fetch(`/.netlify/functions/fetchBooks?query=react`)
         .then((res) => res.json())
         .then((data) => {
-          setResults(data);
+          setResults(data.bookInfo.data.items);
         })
         .catch((error) => {
           console.log(error);
@@ -65,7 +62,7 @@ const Search = () => {
 
       <div className="display-section">
         {results.length !== 0 ? (
-          <Display searchResults={results} />
+          <Display searchResultsArray={results} />
         ) : (
           <Reading />
         )}

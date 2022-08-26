@@ -3,7 +3,7 @@ import Modal from "./Modal";
 
 const Display = (props) => {
   //reseive search result from Search component
-  const books = props.searchResults.items;
+  const books = props.searchResultsArray;
 
   //open book description modal
   const [bookModal, setBookModal] = useState({});
@@ -14,14 +14,6 @@ const Display = (props) => {
     console.log(bookInfo.description);
     setModalOpen(true);
   };
-
-  //disable scroll
-
-  // useEffect(() => {
-  //   if (modalOpen) {
-  //     window;
-  //   }
-  // }, [modalOpen]);
 
   return (
     <div className="display">
