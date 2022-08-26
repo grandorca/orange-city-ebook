@@ -334,6 +334,7 @@ footer .copyright .copyright-anchor {
 }
 .contact .contact-card {
   display: flex;
+  flex-flow: row;
   align-items: center;
   padding-bottom: 1rem;
   border: 1px solid rgba(100, 100, 100, 0.3);
@@ -345,7 +346,7 @@ footer .copyright .copyright-anchor {
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1024px) {
   .contact .contact-card {
     width: 90vw;
     flex-flow: column;
@@ -354,13 +355,24 @@ footer .copyright .copyright-anchor {
 }
 .contact .contact-card .contact-user {
   width: 300px;
-  min-width: 150px;
-  height: auto;
+  min-width: 200px;
 }
 .contact .contact-card .contact-text-container {
   font-size: calc(14px + 0.5vmin);
   padding: 2rem;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+  width: 550px;
+}
+@media only screen and (max-width: 1024px) {
+  .contact .contact-card .contact-text-container {
+    padding: 2rem;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .contact .contact-card .contact-text-container {
+    padding: 1rem;
+  }
 }
 .contact .contact-card .contact-text-container #contact-p-text {
   text-align: left;

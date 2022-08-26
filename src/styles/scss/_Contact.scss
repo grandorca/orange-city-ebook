@@ -1,11 +1,12 @@
 @use "_abstracts" as *;
 
 .contact {
-  flex: 1;
-  margin: auto;
+  flex: 1; //make .conatact takes whole mid-section
+  margin: auto; //therefore there is no place for vertical margin
 
   & .contact-card {
     display: flex;
+    flex-flow: row;
     align-items: center;
     padding-bottom: 1rem;
     border: 1px solid $color-gray;
@@ -17,7 +18,7 @@
     margin-top: 10vh;
     margin-bottom: 10vh;
 
-    @include mobile {
+    @include tablet {
       width: 90vw;
       flex-flow: column;
       margin-top: 5vh;
@@ -25,14 +26,23 @@
 
     & .contact-user {
       width: 300px;
-      min-width: 150px;
-      height: auto;
+      min-width: 200px;
     }
 
     & .contact-text-container {
       font-size: $font-size-medium;
       padding: 2rem;
-      padding-left: 1rem;
+      padding-left: 0.5rem;
+      width: 550px;
+
+      @include tablet {
+        padding: 2rem;
+        width: auto;
+      }
+
+      @include mobile {
+        padding: 1rem;
+      }
 
       & #contact-p-text {
         text-align: left;
