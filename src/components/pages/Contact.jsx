@@ -8,17 +8,13 @@ const Contact = () => {
 
         <div className="contact-text-container">
           <p className="contact-p" id="contact-p-text">
+            This website allows users to search books from Google book database.
+            Books are searched with book's title, author, publisher, etc. and
+            displayed in relevant order The information of the book retrieved
+            through Netlify Functions.
+            <br />
+            <br />
             Designed and developed by a web developer, Moohyun Kang.
-            <br />
-            <br />
-            This website allow users to search books that are saved in Google
-            book database.
-            <br />
-            The information of the book can be searched with book's title,
-            author, and publisher.
-            <br />
-            The search data is retrieved from Google Books APIs through Google
-            Cloud server.
           </p>
           <p className="contact-p" id="contact-p-anchor">
             <a
