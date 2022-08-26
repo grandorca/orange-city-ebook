@@ -10,7 +10,7 @@ const Contact = () => {
           <p className="contact-p" id="contact-p-text">
             This website allows users to search books from Google book database.
             Books are searched with book's title, author, publisher, etc. and
-            displayed in relevant order The information of the book retrieved
+            displayed in relevant order. The information of the book is fetched
             through Netlify Functions.
             <br />
             <br />

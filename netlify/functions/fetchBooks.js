@@ -5,7 +5,7 @@ exports.handler = async function (event) {
     const query = event.queryStringParameters.query;
 
     const { data } = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${query}&orderBy=relevance`
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&printType=books`
     );
 
     return {
