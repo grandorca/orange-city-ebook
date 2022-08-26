@@ -10,7 +10,7 @@ exports.handler = async function (event) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ bookInfo: { data } }),
+      body: JSON.stringify(data),
     };
   } catch (erro) {}
 };
