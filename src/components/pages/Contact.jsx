@@ -10,8 +10,10 @@ const Contact = () => {
           <p className="contact-p" id="contact-p-text">
             This website allows users to search books from Google book database.
             Books are searched with book's title, author, publisher, etc. and
-            displayed in relevant order. The informations of searched books are
-            fetched through Netlify Functions.
+            displayed in relevant order.
+            <br />
+            The informations of searched books are fetched through Netlify
+            Functions.
             <br />
             <br />
             Designed and developed by a web developer, Moohyun Kang.
