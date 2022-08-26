@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Display from "../elements/Display";
 import { ReactComponent as Bookshelf } from "../../assets/illustrations/bookshelf.svg";
 import { ReactComponent as Reading } from "../../assets/illustrations/reading.svg";
@@ -15,7 +15,7 @@ const Search = () => {
     const trimedQuery = query.trim();
 
     if (trimedQuery !== "") {
-      await fetch(`/.netlify/functions/fetchBooks?query=react`)
+      await fetch(`/.netlify/functions/fetchBooks?query=${query}`)
         .then((res) => res.json())
         .then((data) => {
           setResults(data.bookInfo.data.items);
