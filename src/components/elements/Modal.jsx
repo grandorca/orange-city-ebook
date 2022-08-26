@@ -1,6 +1,23 @@
+import { useEffect } from "react";
+
 const Modal = (props) => {
   //reseive book information from Display component
   let bookInfo = props.bookModal;
+
+  useEffect(() => {
+    const scrollSetter = (visibility) => {
+      document.documentElement.style.setProperty(
+        "--scroll-enabler",
+        visibility
+      );
+    };
+
+    if (props.modalOpen) {
+      scrollSetter("hidden");
+    } else {
+      scrollSetter("visible");
+    }
+  }, [props.modalOpen]);
 
   return props.modalOpen ? (
     <div
