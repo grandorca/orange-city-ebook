@@ -18,7 +18,7 @@ const Contact = () => {
           </p>
           <p className="contact-p" id="contact-p-anchor">
             <a
-              href="https://www.google.com"
+              href="https://github.com/moohka"
               target="_blank"
               rel="noreferrer"
               className="contact-p-anchor-item"
@@ -27,7 +27,7 @@ const Contact = () => {
             </a>
             &nbsp;|&nbsp;
             <a
-              href="https://www.google.com"
+              href="https://codepen.io/moohka"
               target="_blank"
               rel="noreferrer"
               className="contact-p-anchor-item"
@@ -36,9 +36,7 @@ const Contact = () => {
             </a>
             &nbsp;|&nbsp;
             <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noreferrer"
+              href="mailto:moohka@hotmail.com"
               className="contact-p-anchor-item"
             >
               Email
