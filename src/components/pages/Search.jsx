@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import Display from "../elements/Display";
 import { ReactComponent as Bookshelf } from "../../assets/illustrations/bookshelf.svg";
 import { ReactComponent as Reading } from "../../assets/illustrations/reading.svg";
+import axios from "axios";
 
 const Search = () => {
   const searchBarRef = useRef();
@@ -15,17 +16,30 @@ const Search = () => {
     const trimedQuery = query.trim();
 
     if (trimedQuery !== "") {
-      await fetch(`/.netlify/functions/fetchBooks?query=${query}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setResults(data.items);
+      axios
+        .get(`/.netlify/functions/fetchBooks?query=${query}`)
+        .then(({ data }) => {
+          setResults({ data }.data.items);
         })
         .catch((error) => {
-          console.log(error);
+          console.log(error.toJSON());
         });
     } else {
       setResults([]);
     }
+
+    // if (trimedQuery !== "") {
+    //   await fetch(`/.netlify/functions/fetchBooks?query=${query}`)
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //       setResults(data.items);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // } else {
+    //   setResults([]);
+    // }
   };
 
   return (

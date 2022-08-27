@@ -18,6 +18,7 @@ const Contact = () => {
             <br />
             Designed and developed by a web developer, Moohyun Kang.
           </p>
+
           <p className="contact-p" id="contact-p-anchor">
             <a
               href="https://github.com/moohka"
