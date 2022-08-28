@@ -1,6 +1,6 @@
 @use "_abstracts" as *;
 
-.search {
+.search-page {
   /**upper part of the search page*/
   & .search-section {
     position: relative;
@@ -113,6 +113,19 @@
     position: relative;
     display: grid;
     place-items: center;
+
+    .display {
+      display: flex;
+      flex-flow: column;
+      gap: 2rem;
+      width: 80vw;
+      padding: 4rem 0;
+      margin: auto;
+
+      @include tablet {
+        width: 90vw;
+      }
+    }
 
     & svg {
       width: 100%;

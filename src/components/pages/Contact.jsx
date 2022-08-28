@@ -2,7 +2,7 @@ import user from "../../assets/images/user.png";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact-page">
       <div className="contact-card">
         <img src={user} alt="user" className="contact-user"></img>
 

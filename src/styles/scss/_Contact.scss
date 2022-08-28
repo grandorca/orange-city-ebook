@@ -1,8 +1,8 @@
 @use "_abstracts" as *;
 
-.contact {
-  flex: 1; //make .conatact takes whole mid-section
-  margin: auto; //therefore there is no place for vertical margin
+.contact-page {
+  flex: 1;
+  margin: auto;
 
   & .contact-card {
     display: flex;

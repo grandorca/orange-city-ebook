@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const Modal = (props) => {
   //reseive book information from Display component
-  let bookInfo = props.bookModal;
+  const { title, description } = props.selectedBook;
 
   useEffect(() => {
     const scrollSetter = (visibility) => {
@@ -34,10 +34,10 @@ const Modal = (props) => {
       >
         <div className="modal-content">
           <h1 className="modal-item" id="modal-title">
-            {bookInfo.title}
+            {title}
           </h1>
           <p className="modal-item" id="modal-description">
-            {bookInfo.description ? bookInfo.description : "*No Description"}
+            {description ? description : "*No Description"}
           </p>
         </div>
       </div>

@@ -112,17 +112,17 @@ footer .copyright .copyright-anchor {
   color: inherit;
 }
 
-.search {
+.search-page {
   /**upper part of the search page*/
   /**lower part of the search page*/
 }
-.search .search-section {
+.search-page .search-section {
   position: relative;
   width: 75vw;
   margin: auto;
   padding: 5rem 0;
 }
-.search .search-section::before {
+.search-page .search-section::before {
   content: "";
   position: absolute;
   width: 50vw;
@@ -132,42 +132,42 @@ footer .copyright .copyright-anchor {
   border-bottom: 1px solid rgba(100, 100, 100, 0.3);
 }
 @media only screen and (max-width: 1024px) {
-  .search .search-section::before {
+  .search-page .search-section::before {
     width: 85vw;
   }
 }
 @media only screen and (max-width: 1024px) {
-  .search .search-section {
+  .search-page .search-section {
     width: 90vw;
   }
 }
 @media only screen and (max-width: 640px) {
-  .search .search-section {
+  .search-page .search-section {
     padding: 2rem 0;
   }
 }
-.search svg {
+.search-page svg {
   width: 100%;
   max-width: 550px;
   height: auto;
   margin: auto;
 }
-.search .search-section {
+.search-page .search-section {
   display: flex;
   flex-flow: row;
   gap: 3rem 3rem;
 }
 @media only screen and (max-width: 640px) {
-  .search .search-section {
+  .search-page .search-section {
     flex-flow: column;
   }
 }
-.search .search-section .search-form {
+.search-page .search-section .search-form {
   flex: 1;
   display: grid;
   place-items: center;
 }
-.search .search-section .search-form .search-form-center {
+.search-page .search-section .search-form .search-form-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,23 +175,23 @@ footer .copyright .copyright-anchor {
   gap: 2rem;
   width: 100%;
 }
-.search .search-section .search-form .search-form-center .search-label {
+.search-page .search-section .search-form .search-form-center .search-label {
   display: block;
   text-align: center;
   font-size: calc(21px + 0.5vmin);
 }
-.search .search-section .search-form .search-form-center .search-input-duo {
+.search-page .search-section .search-form .search-form-center .search-input-duo {
   display: flex;
   align-items: center;
   gap: 1rem;
   width: 100%;
 }
 @media only screen and (max-width: 1024px) {
-  .search .search-section .search-form .search-form-center .search-input-duo {
+  .search-page .search-section .search-form .search-form-center .search-input-duo {
     flex-flow: column;
   }
 }
-.search .search-section .search-form .search-form-center .search-input-duo .search-input {
+.search-page .search-section .search-form .search-form-center .search-input-duo .search-input {
   outline: none;
   padding: 0.5rem;
   font-size: calc(16px + 0.5vmin);
@@ -200,7 +200,7 @@ footer .copyright .copyright-anchor {
   min-width: 15rem;
   width: 100%;
 }
-.search .search-section .search-form .search-form-center .search-input-duo .search-button {
+.search-page .search-section .search-form .search-form-center .search-input-duo .search-button {
   padding: 0.5rem 2rem;
   font-size: calc(16px + 0.5vmin);
   font-weight: 600;
@@ -209,39 +209,38 @@ footer .copyright .copyright-anchor {
   border: none;
   border-radius: 10px;
 }
-.search .search-section .search-form .search-form-center .search-input-duo .search-button:hover {
+.search-page .search-section .search-form .search-form-center .search-input-duo .search-button:hover {
   background-color: #ffae19;
 }
-.search .search-section .search-form .search-form-center .search-input-duo .search-button:active {
+.search-page .search-section .search-form .search-form-center .search-input-duo .search-button:active {
   background-color: #e59400;
 }
-.search .display-section {
+.search-page .display-section {
   position: relative;
   display: grid;
   place-items: center;
 }
-.search .display-section svg {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin: 10vh 0;
-}
-
-.display {
+.search-page .display-section .display {
   display: flex;
   flex-flow: column;
   gap: 2rem;
   width: 80vw;
   padding: 4rem 0;
   margin: auto;
-  /**each book display card*/
 }
 @media only screen and (max-width: 1024px) {
-  .display {
+  .search-page .display-section .display {
     width: 90vw;
   }
 }
-.display .book-card {
+.search-page .display-section svg {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 10vh 0;
+}
+
+.book-card {
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -250,7 +249,7 @@ footer .copyright .copyright-anchor {
   padding: 1rem;
   float: left;
 }
-.display .book-card #book-cover {
+.book-card #book-cover {
   width: 150px;
   height: auto;
   float: left;
@@ -259,33 +258,38 @@ footer .copyright .copyright-anchor {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   cursor: pointer;
 }
-.display .book-card #book-cover:hover + .book-detail #book-title {
+.book-card #book-cover:hover + .book-detail-div #book-title {
   text-decoration: underline;
 }
-.display .book-card .book-detail {
+.book-card .book-detail-div {
   position: relative;
   align-self: flex-start;
   display: flex;
   flex-flow: column;
   height: 100%;
 }
-.display .book-card .book-detail .detail-sub-title {
-  font-weight: 600;
-}
-.display .book-card .book-detail .book-item {
+.book-card .book-detail-div .book-item {
   font-size: calc(14px + 0.5vmin);
 }
-.display .book-card .book-detail #book-title {
+.book-card .book-detail-div #book-title {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: calc(16px + 0.5vmin);
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
-.display .book-card .book-detail #book-title span:hover {
+.book-card .book-detail-div #book-title:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+.book-card .book-detail-div #book-subtitle {
+  font-weight: 500;
+  font-size: calc(14px + 0.5vmin);
+  margin-bottom: 1.5rem;
+}
+.book-card .book-detail-div .detail-key {
+  font-weight: 600;
 }
 
 .modal-overlay {
@@ -329,15 +333,15 @@ footer .copyright .copyright-anchor {
 .modal-overlay .modal-content #modal-description {
   color: black;
   font-size: calc(14px + 0.5vmin);
-  margin-bottom: 4rem;
   line-height: 1.2rem;
+  margin-bottom: 4rem;
 }
 
-.contact {
+.contact-page {
   flex: 1;
   margin: auto;
 }
-.contact .contact-card {
+.contact-page .contact-card {
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -352,46 +356,46 @@ footer .copyright .copyright-anchor {
   margin-bottom: 10vh;
 }
 @media only screen and (max-width: 1024px) {
-  .contact .contact-card {
+  .contact-page .contact-card {
     width: 90vw;
     flex-flow: column;
     margin-top: 5vh;
   }
 }
-.contact .contact-card .contact-user {
+.contact-page .contact-card .contact-user {
   width: 300px;
   min-width: 200px;
 }
-.contact .contact-card .contact-text-container {
+.contact-page .contact-card .contact-text-container {
   font-size: calc(14px + 0.5vmin);
   padding: 2rem;
   padding-left: 0.5rem;
   width: 550px;
 }
 @media only screen and (max-width: 1024px) {
-  .contact .contact-card .contact-text-container {
+  .contact-page .contact-card .contact-text-container {
     padding: 2rem;
     width: auto;
   }
 }
 @media only screen and (max-width: 640px) {
-  .contact .contact-card .contact-text-container {
+  .contact-page .contact-card .contact-text-container {
     padding: 1rem;
   }
 }
-.contact .contact-card .contact-text-container #contact-p-text {
+.contact-page .contact-card .contact-text-container #contact-p-text {
   text-align: left;
   margin-bottom: 2rem;
 }
-.contact .contact-card .contact-text-container #contact-p-anchor {
+.contact-page .contact-card .contact-text-container #contact-p-anchor {
   text-align: center;
 }
-.contact .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item {
+.contact-page .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item {
   color: rgba(20, 20, 20, 0.8);
 }
-.contact .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item:hover {
+.contact-page .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item:hover {
   color: black;
 }
-.contact .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item:active {
+.contact-page .contact-card .contact-text-container #contact-p-anchor .contact-p-anchor-item:active {
   color: gray;
 }/*# sourceMappingURL=style.css.map */

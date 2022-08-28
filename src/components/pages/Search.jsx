@@ -1,14 +1,15 @@
 import { useState, useRef } from "react";
-import Display from "../elements/Display";
-import { ReactComponent as Bookshelf } from "../../assets/illustrations/bookshelf.svg";
-import { ReactComponent as Reading } from "../../assets/illustrations/reading.svg";
 import axios from "axios";
+import { ReactComponent as SVGBookshelf } from "../../assets/illustrations/bookshelf.svg";
+import { ReactComponent as SVGReading } from "../../assets/illustrations/reading.svg";
+import BookCard from "../elements/BookCard";
+import BookModal from "../elements/BookModal";
 
 const Search = () => {
   const searchBarRef = useRef();
   const searchButtonRef = useRef();
 
-  //search the book
+  //search books
   const [results, setResults] = useState([]);
 
   const searchBook = async () => {
@@ -27,25 +28,17 @@ const Search = () => {
     } else {
       setResults([]);
     }
-
-    // if (trimedQuery !== "") {
-    //   await fetch(`/.netlify/functions/fetchBooks?query=${query}`)
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       setResults(data.items);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // } else {
-    //   setResults([]);
-    // }
   };
 
+  //open book description modal
+  const [selectedBook, setSelectedBook] = useState({});
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <div className="search">
+    <div className="search-page">
+      {/* search */}
       <div className="search-section">
-        <Bookshelf />
+        <SVGBookshelf />
 
         <div className="search-form">
           <div className="search-form-center">
@@ -74,11 +67,29 @@ const Search = () => {
         </div>
       </div>
 
+      {/* display */}
       <div className="display-section">
         {results.length !== 0 ? (
-          <Display searchResultsArray={results} />
+          <div className="display">
+            {results.map((bookObject) => {
+              return (
+                <BookCard
+                  key={bookObject.id}
+                  bookObject={bookObject}
+                  setModalOpen={setModalOpen}
+                  setSelectedBook={setSelectedBook}
+                />
+              );
+            })}
+
+            <BookModal
+              selectedBook={selectedBook}
+              modalOpen={modalOpen}
+              setModalOpen={setModalOpen}
+            />
+          </div>
         ) : (
-          <Reading />
+          <SVGReading />
         )}
       </div>
     </div>
