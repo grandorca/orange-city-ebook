@@ -36,7 +36,6 @@ header {
   border-bottom: 1px solid;
   border-color: rgba(100, 100, 100, 0.3);
   gap: 0 1rem;
-  background: linear-gradient(#f1f1f1, white 100%);
 }
 @media only screen and (max-width: 640px) {
   header {
