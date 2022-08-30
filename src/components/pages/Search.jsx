@@ -9,7 +9,7 @@ const Search = () => {
   const searchBarRef = useRef();
   const searchButtonRef = useRef();
 
-  //search books
+  //search books & loading while searching
   const [results, setResults] = useState([]);
 
   const searchBook = async () => {
@@ -23,7 +23,7 @@ const Search = () => {
           setResults({ data }.data.items);
         })
         .catch((error) => {
-          console.log(error.toJSON());
+          console.log(error);
         });
     } else {
       setResults([]);

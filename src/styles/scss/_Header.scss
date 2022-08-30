@@ -46,9 +46,9 @@ header {
     display: flex;
     height: 100%;
     font-weight: 600;
-    font-size: $font-size-large;
+    font-size: $font-size-medium;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 2.5rem;
     margin-right: 1rem;
 
     @include mobile {
@@ -60,6 +60,7 @@ header {
       display: inline-block;
       align-self: flex-end;
       text-decoration: none;
+      text-transform: uppercase;
       color: $color-font;
 
       &:hover {

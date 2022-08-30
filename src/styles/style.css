@@ -72,9 +72,9 @@ header nav {
   display: flex;
   height: 100%;
   font-weight: 600;
-  font-size: calc(16px + 0.5vmin);
+  font-size: calc(14px + 0.5vmin);
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2.5rem;
   margin-right: 1rem;
 }
 @media only screen and (max-width: 640px) {
@@ -87,6 +87,7 @@ header nav .nav-anchor {
   display: inline-block;
   align-self: flex-end;
   text-decoration: none;
+  text-transform: uppercase;
   color: rgba(20, 20, 20, 0.8);
 }
 header nav .nav-anchor:hover {
