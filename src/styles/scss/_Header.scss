@@ -7,7 +7,6 @@ header {
   border-bottom: 1px solid;
   border-color: $color-gray;
   gap: 0 1rem;
-  background: linear-gradient(#f1f1f1, white 100%);
 
   @include mobile {
     padding: 1rem;
