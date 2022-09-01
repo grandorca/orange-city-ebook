@@ -72,7 +72,7 @@ header nav {
   display: flex;
   height: 100%;
   font-weight: 600;
-  font-size: calc(14px + 0.5vmin);
+  font-size: calc(15px + 0.5vmin);
   justify-content: space-between;
   gap: 2.5rem;
   margin-right: 1rem;
@@ -194,7 +194,7 @@ footer .copyright .copyright-anchor {
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-input {
   outline: none;
   padding: 0.5rem;
-  font-size: calc(16px + 0.5vmin);
+  font-size: calc(15px + 0.5vmin);
   border: 1px solid orange;
   border-radius: 10px;
   min-width: 15rem;
@@ -202,7 +202,7 @@ footer .copyright .copyright-anchor {
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-button {
   padding: 0.5rem 2rem;
-  font-size: calc(16px + 0.5vmin);
+  font-size: calc(15px + 0.5vmin);
   font-weight: 600;
   color: white;
   background-color: orange;
@@ -260,6 +260,8 @@ footer .copyright .copyright-anchor {
 }
 .book-card #book-cover:hover + .book-detail-div #book-title {
   text-decoration: underline;
+  -webkit-text-decoration-color: orange;
+          text-decoration-color: orange;
 }
 .book-card .book-detail-div {
   position: relative;
@@ -268,28 +270,30 @@ footer .copyright .copyright-anchor {
   flex-flow: column;
   height: 100%;
 }
-.book-card .book-detail-div .book-item {
-  font-size: calc(14px + 0.5vmin);
-}
 .book-card .book-detail-div #book-title {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: calc(16px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
   margin-bottom: 0.4rem;
 }
 .book-card .book-detail-div #book-title:hover {
   text-decoration: underline;
+  -webkit-text-decoration-color: orange;
+          text-decoration-color: orange;
   cursor: pointer;
 }
 .book-card .book-detail-div #book-subtitle {
   font-weight: 500;
-  font-size: calc(14px + 0.5vmin);
+  font-size: calc(12px + 0.5vmin);
   margin-bottom: 1.5rem;
 }
 .book-card .book-detail-div .detail-key {
   font-weight: 600;
+}
+.book-card .book-detail-div .book-item {
+  font-size: calc(12px + 0.5vmin);
 }
 
 .modal-overlay {
@@ -325,15 +329,15 @@ footer .copyright .copyright-anchor {
   overflow: auto;
 }
 .modal-overlay .modal-content #modal-title {
-  font-size: calc(16px + 0.5vmin);
+  font-size: calc(17px + 0.5vmin);
   border-bottom: 1px solid rgba(100, 100, 100, 0.3);
   padding-bottom: 10px;
   margin-bottom: 1rem;
 }
 .modal-overlay .modal-content #modal-description {
   color: black;
-  font-size: calc(14px + 0.5vmin);
-  line-height: 1.2rem;
+  font-size: calc(15px + 0.5vmin);
+  line-height: 1.3rem;
   margin-bottom: 4rem;
 }
 
@@ -367,7 +371,7 @@ footer .copyright .copyright-anchor {
   min-width: 200px;
 }
 .contact-page .contact-card .contact-text-container {
-  font-size: calc(14px + 0.5vmin);
+  font-size: calc(15px + 0.5vmin);
   padding: 2rem;
   padding-left: 0.5rem;
   width: 550px;

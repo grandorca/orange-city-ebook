@@ -33,7 +33,7 @@
     overflow: auto;
 
     & #modal-title {
-      font-size: $font-size-large;
+      font-size: $font-size-title;
       border-bottom: 1px solid $color-gray;
       padding-bottom: 10px;
       margin-bottom: 1rem;
@@ -41,8 +41,8 @@
 
     & #modal-description {
       color: black;
-      font-size: $font-size-medium;
-      line-height: 1.2rem;
+      font-size: $font-size-large;
+      line-height: 1.3rem;
       margin-bottom: 4rem;
     }
   }

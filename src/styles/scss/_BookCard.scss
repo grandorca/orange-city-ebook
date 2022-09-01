@@ -22,6 +22,7 @@
       & + .book-detail-div {
         & #book-title {
           text-decoration: underline;
+          text-decoration-color: $color-orange;
         }
       }
     }
@@ -34,20 +35,17 @@
     flex-flow: column;
     height: 100%;
 
-    & .book-item {
-      font-size: $font-size-medium;
-    }
-
     & #book-title {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      font-size: $font-size-large;
+      font-size: $font-size-title;
       margin-bottom: 0.4rem;
 
       &:hover {
         text-decoration: underline;
+        text-decoration-color: $color-orange;
         cursor: pointer;
       }
     }
@@ -58,8 +56,12 @@
       margin-bottom: 1.5rem;
     }
 
+    //author, publisher, date
     & .detail-key {
       font-weight: 600;
+    }
+    & .book-item {
+      font-size: $font-size-medium;
     }
   }
 }
