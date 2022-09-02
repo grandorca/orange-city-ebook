@@ -21,7 +21,6 @@
     &:hover {
       & + .book-detail-div {
         & #book-title {
-          text-decoration: underline;
           text-decoration-color: $color-orange;
         }
       }
@@ -42,9 +41,11 @@
       overflow: hidden;
       font-size: $font-size-title;
       margin-bottom: 0.4rem;
+      text-decoration: underline;
+      transition: all 0.3s ease;
+      text-decoration-color: $color-white;
 
       &:hover {
-        text-decoration: underline;
         text-decoration-color: $color-orange;
         cursor: pointer;
       }

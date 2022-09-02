@@ -32,11 +32,11 @@ const Header = () => {
 
         <nav>
           <Link to="/" className="nav-anchor">
-            Search
+            Search<i></i>
           </Link>
 
           <Link to="/contact" className="nav-anchor">
-            Contact
+            Contact<i></i>
           </Link>
         </nav>
       </div>
