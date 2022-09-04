@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [today, setToday] = useState();
+  const navbar = useRef([]);
 
   useEffect(() => {
     //display today's date
@@ -16,6 +17,16 @@ const Header = () => {
     let todayFormatted = new Date().toLocaleDateString("en-US", options);
 
     setToday(todayFormatted);
+
+    //navbar item hover effect
+    navbar.current.forEach((theRef) => {
+      theRef.addEventListener("mouseenter", (e) => {
+        e.target.classList.toggle("hover-effect");
+      });
+      theRef.addEventListener("mouseleave", (e) => {
+        e.target.classList.toggle("hover-effect");
+      });
+    });
   }, []);
 
   return (
@@ -31,11 +42,23 @@ const Header = () => {
         </div>
 
         <nav>
-          <Link to="/" className="nav-anchor">
+          <Link
+            to="/"
+            className="nav-anchor"
+            ref={(thisRef) => {
+              navbar.current[0] = thisRef;
+            }}
+          >
             Search<i></i>
           </Link>
 
-          <Link to="/contact" className="nav-anchor">
+          <Link
+            to="/contact"
+            className="nav-anchor"
+            ref={(thisRef) => {
+              navbar.current[1] = thisRef;
+            }}
+          >
             Contact<i></i>
           </Link>
         </nav>

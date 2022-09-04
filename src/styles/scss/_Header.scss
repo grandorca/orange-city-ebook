@@ -64,8 +64,9 @@ header {
       text-decoration: none;
       text-transform: uppercase;
       color: $color-font;
-      transition: all 0.4s ease;
+      transition: color 0.4s ease, left 0.4s ease, bottom 0.2s ease 0.4s;
 
+      //border
       &::before {
         content: "";
         position: absolute;
@@ -77,17 +78,20 @@ header {
         z-index: -1;
       }
 
+      //revealing part cover
       &::after {
         content: "";
         position: absolute;
         top: 0;
-        left: -1px;
+        left: 0.5rem;
         bottom: -2px;
         right: -5px;
         background-color: white;
         z-index: -1;
+        transition: left 0.4s ease, bottom 0s ease;
       }
 
+      //top part cover
       & i {
         position: absolute;
         top: 0;
@@ -107,24 +111,26 @@ header {
         }
       }
 
-      &:hover {
+      &.hover-effect {
         color: black;
 
         &::after {
-          animation: right-top 0.5s ease-out forwards;
-
-          @keyframes right-top {
-            40% {
-              left: 100%;
-              bottom: -2px;
-            }
-            100% {
-              bottom: 8px;
-              left: 100%;
-            }
-          }
+          transition: left 0.3s ease, bottom 0.2s ease 0.2s;
+          left: 100%;
+          bottom: 8px;
         }
       }
     }
   }
 }
+
+// @keyframes reveal-border {
+//   40% {
+//     left: 100%;
+//     bottom: -2px;
+//   }
+//   100% {
+//     left: 100%;
+//     bottom: 8px;
+//   }
+// }
