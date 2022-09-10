@@ -90,7 +90,7 @@ header nav .nav-anchor {
   text-decoration: none;
   text-transform: uppercase;
   color: rgba(20, 20, 20, 0.8);
-  transition: color 0.4s ease, left 0.4s ease, bottom 0.2s ease 0.4s;
+  transition: color 0.3s ease;
 }
 header nav .nav-anchor::before {
   content: "";
@@ -111,7 +111,7 @@ header nav .nav-anchor::after {
   right: -5px;
   background-color: white;
   z-index: -1;
-  transition: left 0.4s ease, bottom 0s ease;
+  transition: left 0.3s ease, bottom 0s ease;
 }
 header nav .nav-anchor i {
   position: absolute;
@@ -130,10 +130,10 @@ header nav .nav-anchor i::before {
   background-color: white;
   z-index: -1;
 }
-header nav .nav-anchor.hover-effect {
+header nav .nav-anchor:hover {
   color: black;
 }
-header nav .nav-anchor.hover-effect::after {
+header nav .nav-anchor:hover::after {
   transition: left 0.3s ease, bottom 0.2s ease 0.2s;
   left: 100%;
   bottom: 8px;

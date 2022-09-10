@@ -17,16 +17,6 @@ const Header = () => {
     let todayFormatted = new Date().toLocaleDateString("en-US", options);
 
     setToday(todayFormatted);
-
-    //navbar item hover effect
-    navbar.current.forEach((theRef) => {
-      theRef.addEventListener("mouseenter", (e) => {
-        e.target.classList.toggle("hover-effect");
-      });
-      theRef.addEventListener("mouseleave", (e) => {
-        e.target.classList.toggle("hover-effect");
-      });
-    });
   }, []);
 
   return (
