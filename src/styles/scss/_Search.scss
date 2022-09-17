@@ -88,23 +88,16 @@
           }
 
           & .search-button {
-            padding: calc(0.5rem + 2px) 2rem;
-            font-size: $font-size-large;
-            font-weight: 600;
-            color: $color-white;
-            background-color: $color-orange;
-            border: none;
-            border-radius: $border-radius;
-
-            &:hover {
-              background-color: $color-orange-light;
-            }
-            &:active {
-              background-color: $color-orange-dark;
-            }
+            @include button;
           }
         } //end of search-input-duo
-      }
+
+        & .search-select {
+          outline: none;
+          border: 1px solid $color-orange;
+          border-radius: 4px;
+        }
+      } //end of centering-div
     } //end of search-form
   }
 
@@ -114,7 +107,7 @@
     display: grid;
     place-items: center;
 
-    .display {
+    & .display-card-container {
       display: flex;
       flex-flow: column;
       gap: 2rem;
@@ -133,5 +126,124 @@
       height: auto;
       margin: 10vh 0;
     }
-  }
-}
+
+    // & .display-page {
+    //   display: flex;
+    //   justify-content: center;
+    //   gap: 3rem;
+    //   margin-top: 2rem;
+
+    //   & .display-page-button-container {
+    //     width: 100%;
+    //   }
+
+    //   & .display-page-button {
+    //     @include button;
+    //     padding: 0.3rem 1rem;
+
+    //     &#pre {
+    //       display: block;
+    //       margin-left: auto;
+    //     }
+
+    //     &.disabled {
+    //       background-color: $color-gray;
+    //       pointer-events: none;
+    //     }
+    //   }
+    // }
+
+    & .back-to-search-button {
+      @include button;
+      position: relative;
+      bottom: 0;
+      padding: 0.2rem 0.5rem;
+      margin: auto;
+      margin-top: 4vh;
+      animation-timing-function: cubic-bezier(0.86, 0.34, 0.57, 1.22);
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $color-orange;
+        left: 50%;
+        top: -18px;
+        translate: calc(-50% - 4px);
+        rotate: -45deg;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $color-orange;
+        left: 50%;
+        top: -18px;
+        translate: calc(-50% + 4px);
+        rotate: 45deg;
+      }
+
+      &:hover {
+        &::before {
+          animation: up-bounce 1s ease infinite;
+        }
+        &::after {
+          animation: up-bounce 1s ease infinite;
+        }
+
+        @keyframes up-bounce {
+          20% {
+            top: -23px;
+          }
+          50% {
+            top: -14px;
+          }
+          90% {
+            top: -18px;
+          }
+          100% {
+            top: -18px;
+          }
+        }
+      }
+    }
+
+    //loading-image
+    & .display-loading {
+      text-align: center;
+      margin-top: 10vh;
+      margin-bottom: 25vh;
+
+      & .loading-animation {
+        margin: auto;
+        margin-bottom: 0.5rem;
+
+        & circle {
+          stroke: $color-orange;
+          stroke-width: 5;
+          fill: transparent;
+          stroke-dasharray: 205;
+          stroke-dashoffset: 0;
+          transform-origin: 50px 50px;
+          animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+          100% {
+            rotate: 360deg;
+          }
+        }
+      }
+
+      & .loading-text {
+        font-weight: 600;
+        color: $color-orange;
+      }
+    }
+  } //end of display-section
+} // end of search-page

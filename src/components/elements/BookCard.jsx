@@ -23,7 +23,7 @@ const BookCard = (props) => {
       <img
         className="book-item"
         id="book-cover"
-        alt="book cover"
+        alt="no book cover"
         src={bookCover}
         onClick={() => {
           openTheModal(bookVolInfo);
