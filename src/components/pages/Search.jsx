@@ -39,7 +39,6 @@ const Search = () => {
         )
         .then(({ data }) => {
           setResults({ data }.data.items);
-          // dev
           // console.log({ data }.data.totalItems);
         })
         .catch((error) => {
@@ -57,8 +56,6 @@ const Search = () => {
   };
 
   useEffect(() => {
-    results ? console.log("true", results) : console.log("false");
-
     searchBook();
     // eslint-disable-next-line
   }, [orderBy]);
