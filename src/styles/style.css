@@ -470,6 +470,7 @@ footer .copyright .copyright-anchor {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
 }
 .modal-overlay .modal {
   position: fixed;
