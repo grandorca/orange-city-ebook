@@ -3,7 +3,6 @@ import { useEffect } from "react";
 const Modal = (props) => {
   //reseive book information from Display component
   const { title, description } = props.selectedBook;
-
   useEffect(() => {
     const scrollSetter = (visibility) => {
       document.documentElement.style.setProperty(
@@ -11,14 +10,12 @@ const Modal = (props) => {
         visibility
       );
     };
-
     if (props.modalOpen) {
       scrollSetter("hidden");
     } else {
       scrollSetter("visible");
     }
   }, [props.modalOpen]);
-
   return props.modalOpen ? (
     <div
       className="modal-overlay"

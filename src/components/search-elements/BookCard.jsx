@@ -1,15 +1,13 @@
 const BookCard = (props) => {
-  //retrieve book data from props
+  //retrieve book data from
   const thisBook = props.bookObject;
   const bookVolInfo = thisBook.volumeInfo;
   const bookCover =
     bookVolInfo.imageLinks && bookVolInfo.imageLinks.smallThumbnail;
   const { title, subtitle, authors, publisher, publishedDate } = bookVolInfo;
-
   //open book description modal
-  const setModalOpen = props.setModalOpen;
-  const setSelectedBook = props.setSelectedBook;
-
+  const setModalOpen = setModalOpen;
+  const setSelectedBook = setSelectedBook;
   const openTheModal = (bookVolInfo) => {
     setSelectedBook({
       title: bookVolInfo.title,
@@ -17,7 +15,6 @@ const BookCard = (props) => {
     });
     setModalOpen(true);
   };
-
   return (
     <div className="book-card">
       <img
@@ -29,7 +26,6 @@ const BookCard = (props) => {
           openTheModal(bookVolInfo);
         }}
       ></img>
-
       <div className="book-detail-div">
         <h2
           className="book-item"
@@ -40,11 +36,9 @@ const BookCard = (props) => {
         >
           {title}
         </h2>
-
         <h2 className="book-item" id="book-subtitle">
           {subtitle}
         </h2>
-
         <p className="book-item" id="book-authors">
           {authors && authors.length > 1 ? (
             <span>
@@ -64,12 +58,10 @@ const BookCard = (props) => {
             </span>
           ) : null}
         </p>
-
         <p className="book-item" id="book-pulisher">
           <span className="detail-key">Publisher:&nbsp;</span>
           {publisher}
         </p>
-
         <p className="book-item" id="book-publishedDate">
           <span className="detail-key">Published Date:&nbsp;</span>
           {publishedDate}
