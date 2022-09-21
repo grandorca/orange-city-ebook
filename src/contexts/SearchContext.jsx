@@ -3,11 +3,11 @@ import axios from "axios";
 
 export const SearchContext = createContext();
 
-export function SearchContextReturn() {
+export const SearchContextValue = () => {
   return useContext(SearchContext);
-}
+};
 
-export function SearchProvider({ children }) {
+export const SearchProvider = ({ children }) => {
   const [orderBy, setOrderBy] = useState("relevance");
   const [results, setResults] = useState(false);
 
@@ -47,10 +47,6 @@ export function SearchProvider({ children }) {
   };
 
   //Change ordering of book
-  const selectOrderMethod = (e) => {
-    const selectedOrder = e.target.options[e.target.selectedIndex].value;
-    setOrderBy(selectedOrder);
-  };
 
   return (
     <SearchContext.Provider
@@ -66,11 +62,10 @@ export function SearchProvider({ children }) {
         searchPageRef,
         searchBarRef,
         searchButtonRef,
-        selectOrderMethod,
         searchBook,
       }}
     >
       {children}
     </SearchContext.Provider>
   );
-}
+};

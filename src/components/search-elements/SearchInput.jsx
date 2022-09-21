@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { SearchContext } from "../../contexts/SearchContext";
+import { SearchContextValue } from "../../contexts/SearchContext";
 import { ReactComponent as SVGBookshelf } from "../../assets/illustrations/bookshelf.svg";
 
 const SearchInput = () => {
@@ -7,9 +6,16 @@ const SearchInput = () => {
     searchBarRef,
     searchButtonRef,
     searchPageRef,
-    selectOrderMethod,
+    setOrderBy,
+    // selectOrderMethod,
     searchBook,
-  } = useContext(SearchContext);
+  } = SearchContextValue();
+
+  //Select ordering method function
+  const selectOrderMethod = (e) => {
+    const selectedOrder = e.target.options[e.target.selectedIndex].value;
+    setOrderBy(selectedOrder);
+  };
 
   return (
     <div className="search-section" ref={searchPageRef}>
@@ -28,6 +34,7 @@ const SearchInput = () => {
                 if (e.key === "Enter") searchButtonRef.current.click();
               }}
             ></input>
+
             <button
               className="search-button"
               ref={searchButtonRef}
@@ -50,6 +57,7 @@ const SearchInput = () => {
             <option className="search-option" value="relevance">
               relevant books
             </option>
+
             <option className="search-option" value="newest">
               newest books
             </option>

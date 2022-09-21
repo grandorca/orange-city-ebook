@@ -1,5 +1,5 @@
-import { useEffect, useContext } from "react";
-import { SearchContext } from "../../contexts/SearchContext";
+import { useEffect } from "react";
+import { SearchContextValue } from "../../contexts/SearchContext";
 import { ReactComponent as SVGReading } from "../../assets/illustrations/reading.svg";
 
 import BookCard from "./BookCard";
@@ -7,16 +7,7 @@ import BookModal from "./BookModal";
 import Pagination from "./Pagination";
 
 const SearchResult = () => {
-  const {
-    orderBy,
-    results,
-    setModalOpen,
-    setSelectedBook,
-    selectedBook,
-    modalOpen,
-    searchPageRef,
-    searchBook,
-  } = useContext(SearchContext);
+  const { results, orderBy, searchPageRef, searchBook } = SearchContextValue();
 
   useEffect(() => {
     searchBook();
@@ -30,20 +21,10 @@ const SearchResult = () => {
           //Display-Page
           <div className="display-card-container">
             {results.map((bookObject, id) => {
-              return (
-                <BookCard
-                  key={id}
-                  bookObject={bookObject}
-                  setModalOpen={setModalOpen}
-                  setSelectedBook={setSelectedBook}
-                />
-              );
+              return <BookCard key={id} bookObject={bookObject} />;
             })}
-            <BookModal
-              selectedBook={selectedBook}
-              modalOpen={modalOpen}
-              setModalOpen={setModalOpen}
-            />
+
+            <BookModal />
 
             <Pagination />
 
@@ -52,9 +33,7 @@ const SearchResult = () => {
               onClick={() => {
                 searchPageRef.current.scrollIntoView({ behavior: "smooth" });
               }}
-            >
-              back to search
-            </button>
+            ></button>
           </div>
         ) : (
           //Landing-Page

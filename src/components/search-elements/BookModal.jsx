@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { useContext } from "react";
-import { SearchContext } from "../../contexts/SearchContext";
+import { SearchContextValue } from "../../contexts/SearchContext";
 
 const Modal = () => {
-  //Reseive book information from SearchContext
-  const { modalOpen, setModalOpen, title, description } =
-    useContext(SearchContext);
+  //Receive context from SearchContext
+  const { modalOpen, setModalOpen, selectedBook } = SearchContextValue();
+
+  //Retrieve book data for modal
+  const { title, description } = selectedBook;
 
   //Method that changes :root
   const scrollSetter = (visibility) => {

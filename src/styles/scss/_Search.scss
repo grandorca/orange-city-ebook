@@ -1,7 +1,7 @@
 @use "_abstracts" as *;
 
 .search-page {
-  /**upper part of the search page*/
+  //upper-part
   & .search-section {
     position: relative;
     width: 75vw;
@@ -101,13 +101,14 @@
     } //end of search-form
   }
 
-  /**lower part of the search page*/
+  //lower-part
   & .display-section {
     position: relative;
     display: grid;
     place-items: center;
 
     & .display-card-container {
+      position: relative;
       display: flex;
       flex-flow: column;
       gap: 2rem;
@@ -127,24 +128,15 @@
       margin: 10vh 0;
     }
 
-    & .display-page {
+    & .display-pagination {
       display: flex;
       justify-content: center;
       gap: 3rem;
       margin-top: 2rem;
 
-      & .display-page-button-container {
-        width: 100%;
-      }
-
-      & .display-page-button {
+      & .display-pagination-button {
         @include button;
         padding: 0.3rem 1rem;
-
-        &#pre {
-          display: block;
-          margin-left: auto;
-        }
 
         &.disabled {
           background-color: $color-gray;
@@ -153,13 +145,15 @@
       }
     }
 
+    //toTop button
     & .back-to-search-button {
-      @include button;
-      position: relative;
-      bottom: 0;
-      padding: 0.2rem 0.5rem;
-      margin: auto;
-      margin-top: 4vh;
+      position: absolute;
+      border: none;
+      background: transparent;
+      right: 0;
+      bottom: 5vh;
+      width: 30px;
+      height: 30px;
       animation-timing-function: cubic-bezier(0.86, 0.34, 0.57, 1.22);
 
       &::before {
@@ -169,9 +163,9 @@
         height: 4px;
         border-radius: 2px;
         background-color: $color-orange;
+        top: 50%;
         left: 50%;
-        top: -18px;
-        translate: calc(-50% - 4px);
+        translate: calc(-50% - 4px) -50%;
         rotate: -45deg;
       }
 
@@ -182,9 +176,9 @@
         height: 4px;
         border-radius: 2px;
         background-color: $color-orange;
+        top: 50%;
         left: 50%;
-        top: -18px;
-        translate: calc(-50% + 4px);
+        translate: calc(-50% + 4px) -50%;
         rotate: 45deg;
       }
 
@@ -192,22 +186,23 @@
         &::before {
           animation: up-bounce 1s ease infinite;
         }
+
         &::after {
           animation: up-bounce 1s ease infinite;
         }
 
         @keyframes up-bounce {
           20% {
-            top: -23px;
+            top: 30%;
           }
           50% {
-            top: -14px;
+            top: 70%;
           }
           90% {
-            top: -18px;
+            top: 50%;
           }
           100% {
-            top: -18px;
+            top: 50%;
           }
         }
       }

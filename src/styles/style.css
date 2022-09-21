@@ -157,10 +157,6 @@ footer .copyright .copyright-anchor {
   color: inherit;
 }
 
-.search-page {
-  /**upper part of the search page*/
-  /**lower part of the search page*/
-}
 .search-page .search-section {
   position: relative;
   width: 75vw;
@@ -255,7 +251,7 @@ footer .copyright .copyright-anchor {
   border-radius: 10px;
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-button:hover {
-  background-color: #ffae19;
+  background-color: #ffc965;
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-button:active {
   background-color: #e59400;
@@ -271,6 +267,7 @@ footer .copyright .copyright-anchor {
   place-items: center;
 }
 .search-page .display-section .display-card-container {
+  position: relative;
   display: flex;
   flex-flow: column;
   gap: 2rem;
@@ -289,16 +286,13 @@ footer .copyright .copyright-anchor {
   height: auto;
   margin: 10vh 0;
 }
-.search-page .display-section .display-page {
+.search-page .display-section .display-pagination {
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-top: 2rem;
 }
-.search-page .display-section .display-page .display-page-button-container {
-  width: 100%;
-}
-.search-page .display-section .display-page .display-page-button {
+.search-page .display-section .display-pagination .display-pagination-button {
   padding: calc(0.5rem + 2px) 2rem;
   font-size: calc(15px + 0.5vmin);
   font-weight: 600;
@@ -308,41 +302,26 @@ footer .copyright .copyright-anchor {
   border-radius: 10px;
   padding: 0.3rem 1rem;
 }
-.search-page .display-section .display-page .display-page-button:hover {
-  background-color: #ffae19;
+.search-page .display-section .display-pagination .display-pagination-button:hover {
+  background-color: #ffc965;
 }
-.search-page .display-section .display-page .display-page-button:active {
+.search-page .display-section .display-pagination .display-pagination-button:active {
   background-color: #e59400;
 }
-.search-page .display-section .display-page .display-page-button#pre {
-  display: block;
-  margin-left: auto;
-}
-.search-page .display-section .display-page .display-page-button.disabled {
+.search-page .display-section .display-pagination .display-pagination-button.disabled {
   background-color: rgba(100, 100, 100, 0.3);
   pointer-events: none;
 }
 .search-page .display-section .back-to-search-button {
-  padding: calc(0.5rem + 2px) 2rem;
-  font-size: calc(15px + 0.5vmin);
-  font-weight: 600;
-  color: white;
-  background-color: orange;
+  position: absolute;
   border: none;
-  border-radius: 10px;
-  position: relative;
-  bottom: 0;
-  padding: 0.2rem 0.5rem;
-  margin: auto;
-  margin-top: 4vh;
+  background: transparent;
+  right: 0;
+  bottom: 5vh;
+  width: 30px;
+  height: 30px;
   -webkit-animation-timing-function: cubic-bezier(0.86, 0.34, 0.57, 1.22);
           animation-timing-function: cubic-bezier(0.86, 0.34, 0.57, 1.22);
-}
-.search-page .display-section .back-to-search-button:hover {
-  background-color: #ffae19;
-}
-.search-page .display-section .back-to-search-button:active {
-  background-color: #e59400;
 }
 .search-page .display-section .back-to-search-button::before {
   content: "";
@@ -351,9 +330,9 @@ footer .copyright .copyright-anchor {
   height: 4px;
   border-radius: 2px;
   background-color: orange;
+  top: 50%;
   left: 50%;
-  top: -18px;
-  translate: calc(-50% - 4px);
+  translate: calc(-50% - 4px) -50%;
   rotate: -45deg;
 }
 .search-page .display-section .back-to-search-button::after {
@@ -363,9 +342,9 @@ footer .copyright .copyright-anchor {
   height: 4px;
   border-radius: 2px;
   background-color: orange;
+  top: 50%;
   left: 50%;
-  top: -18px;
-  translate: calc(-50% + 4px);
+  translate: calc(-50% + 4px) -50%;
   rotate: 45deg;
 }
 .search-page .display-section .back-to-search-button:hover::before {
@@ -378,30 +357,30 @@ footer .copyright .copyright-anchor {
 }
 @-webkit-keyframes up-bounce {
   20% {
-    top: -23px;
+    top: 30%;
   }
   50% {
-    top: -14px;
+    top: 70%;
   }
   90% {
-    top: -18px;
+    top: 50%;
   }
   100% {
-    top: -18px;
+    top: 50%;
   }
 }
 @keyframes up-bounce {
   20% {
-    top: -23px;
+    top: 30%;
   }
   50% {
-    top: -14px;
+    top: 70%;
   }
   90% {
-    top: -18px;
+    top: 50%;
   }
   100% {
-    top: -18px;
+    top: 50%;
   }
 }
 .search-page .display-section .display-loading {
