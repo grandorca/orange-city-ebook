@@ -127,31 +127,31 @@
       margin: 10vh 0;
     }
 
-    // & .display-page {
-    //   display: flex;
-    //   justify-content: center;
-    //   gap: 3rem;
-    //   margin-top: 2rem;
+    & .display-page {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
 
-    //   & .display-page-button-container {
-    //     width: 100%;
-    //   }
+      & .display-page-button-container {
+        width: 100%;
+      }
 
-    //   & .display-page-button {
-    //     @include button;
-    //     padding: 0.3rem 1rem;
+      & .display-page-button {
+        @include button;
+        padding: 0.3rem 1rem;
 
-    //     &#pre {
-    //       display: block;
-    //       margin-left: auto;
-    //     }
+        &#pre {
+          display: block;
+          margin-left: auto;
+        }
 
-    //     &.disabled {
-    //       background-color: $color-gray;
-    //       pointer-events: none;
-    //     }
-    //   }
-    // }
+        &.disabled {
+          background-color: $color-gray;
+          pointer-events: none;
+        }
+      }
+    }
 
     & .back-to-search-button {
       @include button;

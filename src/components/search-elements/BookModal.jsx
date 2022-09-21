@@ -1,26 +1,31 @@
 import { useEffect } from "react";
+import { useContext } from "react";
+import { SearchContext } from "../../contexts/SearchContext";
 
-const Modal = (props) => {
-  //reseive book information from Display component
-  const { title, description } = props.selectedBook;
+const Modal = () => {
+  //Reseive book information from SearchContext
+  const { modalOpen, setModalOpen, title, description } =
+    useContext(SearchContext);
+
+  //Method that changes :root
+  const scrollSetter = (visibility) => {
+    document.documentElement.style.setProperty("--scroll-enabler", visibility);
+  };
+
+  //Change scroll value
   useEffect(() => {
-    const scrollSetter = (visibility) => {
-      document.documentElement.style.setProperty(
-        "--scroll-enabler",
-        visibility
-      );
-    };
-    if (props.modalOpen) {
+    if (modalOpen) {
       scrollSetter("hidden");
     } else {
       scrollSetter("visible");
     }
-  }, [props.modalOpen]);
-  return props.modalOpen ? (
+  }, [modalOpen]);
+
+  return modalOpen ? (
     <div
       className="modal-overlay"
       onClick={() => {
-        props.setModalOpen(false);
+        setModalOpen(false);
       }}
     >
       <div

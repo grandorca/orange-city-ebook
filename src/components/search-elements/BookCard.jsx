@@ -1,13 +1,19 @@
+import { useContext } from "react";
+import { SearchContext } from "../../contexts/SearchContext";
+
 const BookCard = (props) => {
+  const { setModalOpen, setSelectedBook } = useContext(SearchContext);
+
   //retrieve book data from
   const thisBook = props.bookObject;
   const bookVolInfo = thisBook.volumeInfo;
   const bookCover =
     bookVolInfo.imageLinks && bookVolInfo.imageLinks.smallThumbnail;
   const { title, subtitle, authors, publisher, publishedDate } = bookVolInfo;
+
   //open book description modal
-  const setModalOpen = setModalOpen;
-  const setSelectedBook = setSelectedBook;
+  // const setModalOpen = setModalOpen;
+  // const setSelectedBook = setSelectedBook;
   const openTheModal = (bookVolInfo) => {
     setSelectedBook({
       title: bookVolInfo.title,
@@ -15,6 +21,7 @@ const BookCard = (props) => {
     });
     setModalOpen(true);
   };
+
   return (
     <div className="book-card">
       <img

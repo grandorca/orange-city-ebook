@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import { SearchContext } from "../../contexts/SearchContext";
 import { ReactComponent as SVGReading } from "../../assets/illustrations/reading.svg";
 
@@ -8,15 +8,20 @@ import Pagination from "./Pagination";
 
 const SearchResult = () => {
   const {
-    // orderBy,
+    orderBy,
     results,
     setModalOpen,
     setSelectedBook,
     selectedBook,
     modalOpen,
+    searchPageRef,
+    searchBook,
   } = useContext(SearchContext);
 
-  const searchPageRef = useContext(SearchContext);
+  useEffect(() => {
+    searchBook();
+    // eslint-disable-next-line
+  }, [orderBy]);
 
   return (
     <div className="display-section">

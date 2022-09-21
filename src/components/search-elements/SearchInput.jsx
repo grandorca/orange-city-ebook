@@ -3,11 +3,16 @@ import { SearchContext } from "../../contexts/SearchContext";
 import { ReactComponent as SVGBookshelf } from "../../assets/illustrations/bookshelf.svg";
 
 const SearchInput = () => {
-  const { searchBarRef, searchButtonRef, selectOrderMethod, searchBook } =
-    useContext(SearchContext);
+  const {
+    searchBarRef,
+    searchButtonRef,
+    searchPageRef,
+    selectOrderMethod,
+    searchBook,
+  } = useContext(SearchContext);
 
   return (
-    <div className="search-section">
+    <div className="search-section" ref={searchPageRef}>
       <SVGBookshelf />
 
       <div className="search-form">
@@ -21,7 +26,6 @@ const SearchInput = () => {
               placeholder="Title, Author, Publisher, ISBN"
               onKeyDown={(e) => {
                 if (e.key === "Enter") searchButtonRef.current.click();
-                console.log(searchBarRef);
               }}
             ></input>
             <button
