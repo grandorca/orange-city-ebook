@@ -3,11 +3,12 @@ import { ReactComponent as SVGBookshelf } from "../../assets/illustrations/books
 
 const SearchInput = () => {
   const {
+    setSearchKey,
     searchBarRef,
     searchButtonRef,
     searchSectionRef,
     setOrderBy,
-    searchBook,
+    setStartIndex,
   } = SearchContextValue();
 
   //Select ordering method function
@@ -38,7 +39,10 @@ const SearchInput = () => {
               className="search-button"
               ref={searchButtonRef}
               onClick={() => {
-                searchBook();
+                const query = searchBarRef.current.value;
+                const trimedQuery = query.trim();
+                setSearchKey(trimedQuery);
+                setStartIndex(0);
               }}
             >
               Search
@@ -50,6 +54,7 @@ const SearchInput = () => {
             name="orderBy"
             defaultValue="relevance"
             onChange={(e) => {
+              setStartIndex(0);
               selectOrderMethod(e);
             }}
           >

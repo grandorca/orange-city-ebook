@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { SearchContextValue } from "../../contexts/SearchContext";
 import { ReactComponent as SVGReading } from "../../assets/illustrations/reading.svg";
 
@@ -7,19 +6,7 @@ import BookModal from "./BookModal";
 import Pagination from "./Pagination";
 
 const SearchResult = () => {
-  const {
-    results,
-    orderBy,
-    startIndex,
-    searchSectionRef,
-    searchBook,
-    displaySectionRef,
-  } = SearchContextValue();
-
-  useEffect(() => {
-    searchBook();
-    // eslint-disable-next-line
-  }, [orderBy, startIndex]);
+  const { results, searchSectionRef, displaySectionRef } = SearchContextValue();
 
   return (
     <div className="display-section" ref={displaySectionRef}>
