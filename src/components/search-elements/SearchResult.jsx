@@ -7,15 +7,22 @@ import BookModal from "./BookModal";
 import Pagination from "./Pagination";
 
 const SearchResult = () => {
-  const { results, orderBy, searchPageRef, searchBook } = SearchContextValue();
+  const {
+    results,
+    orderBy,
+    startIndex,
+    searchSectionRef,
+    searchBook,
+    displaySectionRef,
+  } = SearchContextValue();
 
   useEffect(() => {
     searchBook();
     // eslint-disable-next-line
-  }, [orderBy]);
+  }, [orderBy, startIndex]);
 
   return (
-    <div className="display-section">
+    <div className="display-section" ref={displaySectionRef}>
       {results ? (
         results.length !== 0 ? (
           //Display-Page
@@ -31,7 +38,7 @@ const SearchResult = () => {
             <button
               className="back-to-search-button"
               onClick={() => {
-                searchPageRef.current.scrollIntoView({ behavior: "smooth" });
+                searchSectionRef.current.scrollIntoView({ behavior: "smooth" });
               }}
             ></button>
           </div>

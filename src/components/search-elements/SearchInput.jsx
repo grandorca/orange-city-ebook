@@ -5,9 +5,8 @@ const SearchInput = () => {
   const {
     searchBarRef,
     searchButtonRef,
-    searchPageRef,
+    searchSectionRef,
     setOrderBy,
-    // selectOrderMethod,
     searchBook,
   } = SearchContextValue();
 
@@ -18,7 +17,7 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="search-section" ref={searchPageRef}>
+    <div className="search-section" ref={searchSectionRef}>
       <SVGBookshelf />
 
       <div className="search-form">

@@ -272,7 +272,7 @@ footer .copyright .copyright-anchor {
   flex-flow: column;
   gap: 2rem;
   width: 80vw;
-  padding: 4rem 0;
+  padding: 4rem 0 8rem 0;
   margin: auto;
 }
 @media only screen and (max-width: 1024px) {
@@ -289,7 +289,7 @@ footer .copyright .copyright-anchor {
 .search-page .display-section .display-pagination {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 4rem;
   margin-top: 2rem;
 }
 .search-page .display-section .display-pagination .display-pagination-button {
@@ -316,7 +316,7 @@ footer .copyright .copyright-anchor {
   position: absolute;
   border: none;
   background: transparent;
-  right: 0;
+  right: 5%;
   bottom: 5vh;
   width: 30px;
   height: 30px;

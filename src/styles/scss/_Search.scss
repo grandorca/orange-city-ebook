@@ -113,7 +113,7 @@
       flex-flow: column;
       gap: 2rem;
       width: 80vw;
-      padding: 4rem 0;
+      padding: 4rem 0 8rem 0;
       margin: auto;
 
       @include tablet {
@@ -128,10 +128,11 @@
       margin: 10vh 0;
     }
 
+    //pagination buttons
     & .display-pagination {
       display: flex;
       justify-content: center;
-      gap: 3rem;
+      gap: 4rem;
       margin-top: 2rem;
 
       & .display-pagination-button {
@@ -150,7 +151,7 @@
       position: absolute;
       border: none;
       background: transparent;
-      right: 0;
+      right: 5%;
       bottom: 5vh;
       width: 30px;
       height: 30px;

@@ -8,19 +8,19 @@ export const SearchContextValue = () => {
 };
 
 export const SearchProvider = ({ children }) => {
+  //variables
   const [orderBy, setOrderBy] = useState("relevance");
   const [results, setResults] = useState(false);
+  const [startIndex, setStartIndex] = useState(0);
+  const [totalNumber, setTotalNumber] = useState();
 
   const [selectedBook, setSelectedBook] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
 
-  const searchPageRef = useRef();
+  const searchSectionRef = useRef();
+  const displaySectionRef = useRef();
   const searchBarRef = useRef();
   const searchButtonRef = useRef();
-
-  const loading = () => {
-    setResults([]);
-  };
 
   //Fetch book data function
   const searchBook = async () => {
@@ -32,11 +32,11 @@ export const SearchProvider = ({ children }) => {
     if (trimedQuery !== "") {
       axios
         .get(
-          `/.netlify/functions/fetchBooks?query=${query}&orderBy=${orderBy}&startIndex=0`
+          `/.netlify/functions/fetchBooks?query=${query}&orderBy=${orderBy}&startIndex=${startIndex}`
         )
         .then(({ data }) => {
           setResults({ data }.data.items);
-          // console.log({ data }.data.totalItems);
+          setTotalNumber({ data }.data.totalItems);
         })
         .catch((error) => {
           console.log(error);
@@ -46,20 +46,27 @@ export const SearchProvider = ({ children }) => {
     }
   };
 
-  //Change ordering of book
+  //Show loading animation
+  const loading = () => {
+    setResults([]);
+  };
 
   return (
     <SearchContext.Provider
       value={{
         orderBy,
         setOrderBy,
+        startIndex,
+        setStartIndex,
         selectedBook,
         setSelectedBook,
         modalOpen,
         setModalOpen,
 
         results,
-        searchPageRef,
+        totalNumber,
+        searchSectionRef,
+        displaySectionRef,
         searchBarRef,
         searchButtonRef,
         searchBook,
