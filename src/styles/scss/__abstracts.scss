@@ -1,8 +1,8 @@
 /**variables*/
 //colors
-$color-orange-dark: #e59400;
-$color-orange-light: #ffc965;
 $color-orange: orange; //#ffa500
+$color-orange-light: #ffc965;
+$color-orange-dark: #e09c20;
 $color-dark: #2f2e41; //svg black
 $color-white: white;
 $color-gray: rgb(100, 100, 100, 0.3);
@@ -37,6 +37,7 @@ $border-radius: 10px;
   color: $color-white;
   background-color: $color-orange;
   border: none;
+  box-shadow: inset 0 0 0 2px $color-orange-dark;
   border-radius: $border-radius;
 
   &:hover {

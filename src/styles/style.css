@@ -52,7 +52,7 @@ header .header-title {
 }
 @media only screen and (max-width: 640px) {
   header .header-title {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 header .header-title p {
@@ -72,9 +72,9 @@ header nav {
   display: flex;
   height: 100%;
   font-weight: 600;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(12px + 0.5vmin);
   justify-content: space-between;
-  gap: 2.5rem;
+  gap: 2rem;
   margin-right: 1rem;
 }
 @media only screen and (max-width: 640px) {
@@ -209,23 +209,25 @@ footer .copyright .copyright-anchor {
   place-items: center;
 }
 .search-page .search-section .search-form .search-form-center {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   flex-flow: wrap column;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 }
 .search-page .search-section .search-form .search-form-center .search-label {
   display: block;
   text-align: center;
   font-size: calc(21px + 0.5vmin);
+  margin-bottom: 0.5rem;
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 @media only screen and (max-width: 1024px) {
   .search-page .search-section .search-form .search-form-center .search-input-duo {
@@ -248,15 +250,18 @@ footer .copyright .copyright-anchor {
   color: white;
   background-color: orange;
   border: none;
+  box-shadow: inset 0 0 0 2px #e09c20;
   border-radius: 10px;
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-button:hover {
   background-color: #ffc965;
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-button:active {
-  background-color: #e59400;
+  background-color: #e09c20;
 }
 .search-page .search-section .search-form .search-form-center .search-select {
+  display: block;
+  margin: auto;
   outline: none;
   border: 1px solid orange;
   border-radius: 4px;
@@ -299,6 +304,7 @@ footer .copyright .copyright-anchor {
   color: white;
   background-color: orange;
   border: none;
+  box-shadow: inset 0 0 0 2px #e09c20;
   border-radius: 10px;
   padding: 0.3rem 1rem;
 }
@@ -306,7 +312,7 @@ footer .copyright .copyright-anchor {
   background-color: #ffc965;
 }
 .search-page .display-section .display-pagination .display-pagination-button:active {
-  background-color: #e59400;
+  background-color: #e09c20;
 }
 .search-page .display-section .display-pagination .display-pagination-button.disabled {
   background-color: rgba(100, 100, 100, 0.3);
@@ -532,7 +538,7 @@ footer .copyright .copyright-anchor {
   padding-bottom: 1rem;
   border: 1px solid rgba(100, 100, 100, 0.3);
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 2px 2px 3px -2px, rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 70vw;
   max-width: 800px;
   margin: auto;

@@ -11,7 +11,8 @@
     padding-bottom: 1rem;
     border: 1px solid $color-gray;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 2px 2px 3px -2px,
+      rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 70vw;
     max-width: 800px;
     margin: auto;
