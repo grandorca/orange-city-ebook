@@ -12,7 +12,7 @@ const Contact = () => {
             Books are searched with book's title, author, publisher, etc. and
             displayed in relevant order.
             <br />
-            The informations of searched books are fetched through Netlify
+            The information of searched books are fetched through Netlify
             Functions.
             <br />
             <br />
