@@ -2,14 +2,14 @@
 //colors
 $color-orange: orange; //#ffa500
 $color-orange-light: #ffc965;
-$color-orange-dark: #e09c20;
-$color-dark: #2f2e41; //svg black
+$color-orange-dark: #ec9d00;
+$color-black: #2f2e41; //svg black
 $color-white: white;
 $color-gray: rgb(100, 100, 100, 0.3);
 $color-font: rgb(20, 20, 20, 0.8);
 
 //font-sizes
-$font-size-small: calc(9px + 0.5vmin);
+$font-size-small: clamp(12px, calc(7px + 1vmin), 14px);
 $font-size-medium: calc(12px + 0.5vmin);
 $font-size-large: calc(15px + 0.5vmin);
 $font-size-title: calc(17px + 0.5vmin);
@@ -33,17 +33,16 @@ $border-radius: 10px;
 @mixin button {
   padding: calc(0.5rem + 2px) 2rem;
   font-size: $font-size-large;
-  font-weight: 600;
   color: $color-white;
   background-color: $color-orange;
   border: none;
-  box-shadow: inset 0 0 0 2px $color-orange-dark;
+  // box-shadow: inset 0 0 0 2px $color-orange-dark;
   border-radius: $border-radius;
 
   &:hover {
-    background-color: $color-orange-light;
+    background-color: $color-orange-dark;
   }
   &:active {
-    background-color: $color-orange-dark;
+    background-color: $color-orange-light;
   }
 }

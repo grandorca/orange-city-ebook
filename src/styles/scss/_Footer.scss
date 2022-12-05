@@ -1,18 +1,21 @@
 @use "_abstracts" as *;
 
 footer {
-  color: $color-font;
-  border-top: 1px solid;
-  border-color: $color-gray;
+  background-color: $color-black;
+  color: white;
+  padding: 1rem 0;
 
   & .copyright {
     text-align: center;
-    margin: 1.2rem 0;
     display: block;
     font-size: $font-size-small;
 
+    &#illustrator {
+      margin-bottom: 5px;
+    }
+
     &#developer {
-      margin-bottom: 1.5rem;
+      // margin-bottom: 1rem;
     }
 
     & .copyright-anchor {

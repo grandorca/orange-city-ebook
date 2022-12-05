@@ -37,7 +37,7 @@ header {
 
   & .today-date {
     text-align: right;
-    font-size: xx-small;
+    font-size: 12px;
     color: $color-font;
   }
 
@@ -45,7 +45,7 @@ header {
     display: flex;
     height: 100%;
     font-weight: 600;
-    font-size: $font-size-medium;
+    font-size: 17px;
     justify-content: space-between;
     gap: 2rem;
     margin-right: 1rem;
