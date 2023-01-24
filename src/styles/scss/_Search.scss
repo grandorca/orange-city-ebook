@@ -11,7 +11,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 50vw;
+      width: 80vw;
       left: 50%;
       bottom: 0;
       transform: translateX(-50%);
@@ -64,7 +64,7 @@
         & .search-label {
           display: block;
           text-align: center;
-          font-size: calc(21px + 0.5vmin);
+          font-size: 22px;
           margin-bottom: 0.5rem;
         }
 
@@ -82,7 +82,7 @@
           & .search-input {
             outline: none;
             padding: 0.5rem;
-            font-size: $font-size-large;
+            font-size: $font-size-medium;
             border: 2px solid $color-orange;
             border-radius: $border-radius;
             min-width: 15rem;
@@ -100,7 +100,7 @@
           outline: none;
           border: 1px solid $color-orange;
           border-radius: 4px;
-          font-size: 15px;
+          font-size: 14px;
           color: rgba(0, 0, 0, 0.9);
           padding: 3px;
         }

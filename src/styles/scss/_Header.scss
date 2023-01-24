@@ -1,12 +1,14 @@
 @use "_abstracts" as *;
 
+$header-background-color: white;
+
 header {
   position: relative;
   display: flex;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid;
-  border-color: $color-gray;
+  padding: 1rem 2rem 0.6rem 2rem;
+  background-color: $header-background-color;
   gap: 0 1rem;
+  z-index: 99;
 
   @include mobile {
     padding: 1rem;
@@ -26,6 +28,7 @@ header {
 
     & p {
       font-family: inherit;
+      z-index: 1;
     }
   }
 
@@ -85,7 +88,7 @@ header {
         left: 0.5rem;
         bottom: -2px;
         right: -5px;
-        background-color: white;
+        background-color: $header-background-color;
         z-index: -1;
         transition: left 0.3s ease, bottom 0s ease;
       }
@@ -105,7 +108,7 @@ header {
           left: 0px;
           bottom: 3px;
           right: 3px;
-          background-color: white;
+          background-color: $header-background-color;
           z-index: -1;
         }
       }

@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: var(--scroll-enabler);
+  background-color: #fcfcfc;
 }
 
 code {
@@ -32,10 +33,10 @@ code {
 header {
   position: relative;
   display: flex;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid;
-  border-color: rgba(100, 100, 100, 0.3);
+  padding: 1rem 2rem 0.6rem 2rem;
+  background-color: white;
   gap: 0 1rem;
+  z-index: 99;
 }
 @media only screen and (max-width: 640px) {
   header {
@@ -57,6 +58,7 @@ header .header-title {
 }
 header .header-title p {
   font-family: inherit;
+  z-index: 1;
 }
 header .header-right {
   display: flex;
@@ -165,7 +167,7 @@ footer .copyright .copyright-anchor {
 .search-page .search-section::before {
   content: "";
   position: absolute;
-  width: 50vw;
+  width: 80vw;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
@@ -218,7 +220,7 @@ footer .copyright .copyright-anchor {
 .search-page .search-section .search-form .search-form-center .search-label {
   display: block;
   text-align: center;
-  font-size: calc(21px + 0.5vmin);
+  font-size: 22px;
   margin-bottom: 0.5rem;
 }
 .search-page .search-section .search-form .search-form-center .search-input-duo {
@@ -236,7 +238,7 @@ footer .copyright .copyright-anchor {
 .search-page .search-section .search-form .search-form-center .search-input-duo .search-input {
   outline: none;
   padding: 0.5rem;
-  font-size: calc(15px + 0.5vmin);
+  font-size: calc(12px + 0.5vmin);
   border: 2px solid orange;
   border-radius: 10px;
   min-width: 15rem;
@@ -262,7 +264,7 @@ footer .copyright .copyright-anchor {
   outline: none;
   border: 1px solid orange;
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.9);
   padding: 3px;
 }
