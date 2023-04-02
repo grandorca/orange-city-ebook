@@ -17,7 +17,7 @@ const Footer = () => {
         Designed and developed by&nbsp;
         <a
           className="copyright-anchor"
-          href="https://moohyunkang.netlify.app"
+          href="https://www.moohyunkang.com"
           target="_blank"
           rel="noreferrer"
         >
